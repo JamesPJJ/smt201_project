@@ -1,9 +1,17 @@
 ---
 title: "Project Proposal"
 description: |
-  GIS Project Overview
+  GIS Project Proposal
 author:
-  - name: James
+  - name: James Pang Jun jie
+    url: https://example.com/norajones
+    affiliation: School of Computer and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg
+  - name: Huo Jiali
+    url: https://example.com/norajones
+    affiliation: School of Computer and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg
+  - name: Yao Jiawei
     url: https://example.com/norajones
     affiliation: School of Computer and Information Systems, Singapore Management University
     affiliation_url: https://scis.smu.edu.sg
