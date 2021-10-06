@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Project Proposal"
 description: |
   GIS Project Overview
 author:
