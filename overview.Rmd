@@ -39,19 +39,19 @@ There will be a site suitability analysis of the study area including its distri
 # 3.0 Scope of Work
 
 * Gather requirements
-* Collect Data
+  + Collect Data
 * Perform EDA
-Data extraction
-Data integration
-Data transformation 
-Data wrangling.
+  + Data extraction
+  + Data integration
+  + Data transformation 
+  + Data wrangling.
 * Designing and building GIS model and database based on the project requirements
 * Gather information/insights into various factors:
-Population and demographic
-Economic and Businesses
-Transport and Communication
-Infrastructure 
-Environment and Hazard
+  + Population and demographic
+  + Economic and Businesses
+  + Transport and Communication
+  + Infrastructure 
+  + Environment and Hazard
 * Preparing report of survey
 * Performing site suitability analysis by integrating GIS and multi-criteria evaluation methods.
 * Preparing site suitability analysis report including detailed discussion of the analysing methods used.
