@@ -2066,7 +2066,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">SMT201 GIS Project Website</a>
-<a href="overview.html">Overview</a>
+<a href="overview.html">Proposal</a>
 <a href="dataprep.html">Data Preparation</a>
 <a href="survey.html">Report of Survey</a>
 <a href="site.html">Site Selection Report</a>
@@ -2100,49 +2100,67 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#introduction">1.0 Introduction</a>
-<ul>
-<li><a href="#data-preparation">1.1 Data Preparation</a>
-<ul>
-<li><a href="#add-the-gis-data-into-qgis-project">1.1.1 Add the GIS data into QGIS Project</a></li>
-<li><a href="#using-attribute-query-to-select-a-subset-from-a-master-layer">1.1.2 Using attribute query to select a subset from a master layer</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#raster-data-modelling">2.0 Raster Data Modelling</a>
-<ul>
-<li><a href="#editing-attribute-data">2.1 Editing attribute data</a></li>
-</ul></li>
+<li><a href="#project-motivation">1.0 Project Motivation</a></li>
+<li><a href="#project-objective">2.0 Project Objective</a></li>
+<li><a href="#scope-of-work">3.0 Scope of Work</a></li>
+<li><a href="#project-timelineschedule">4.0 Project Timeline/Schedule</a></li>
+<li><a href="#data-source">5.0 Data Source</a></li>
 </ul>
 </nav>
 </div>
-<h1 id="introduction">1.0 Introduction</h1>
-<p>The true power of a GIS is its analytical capability. GIS analysis functions, however, are generic and are not specifically designed for business intelligence applications. This is particularly true when the analysis involved massive and large data. To meet the analytical requirements and analysis efficiency of market researchers and business analysts, we need to combine appropriate GIS functions and analysis for modelling the business processes.</p>
-<p>This hands-on exercise consists of two major sections. First, you will learn the basic concept of accessibility from geospatial perspective. You will also learn how to use appropriate raster GIS analyse function and mapping techniques to analyse and visualize accessibility maps.</p>
-<h2 id="data-preparation">1.1 Data Preparation</h2>
-<p>Two GIS data are available for the analysis. They are:</p>
+<h1 id="project-motivation">1.0 Project Motivation</h1>
+<p>Indonesia has planned to relocate their capital from Jakarta to Kalimantan. The plan was to relocate the capital to a more central location of Indonesia, which would reduce the developmental inequality between Java and other islands in the Indonesian archipelago and to reduce Jakarta’s burden as Indonesia’s primary hub.</p>
+<p>This gave an opportunity for our group to embark on the journey to discover a suitable site for the relocation using site suitability analysis.</p>
+<h1 id="project-objective">2.0 Project Objective</h1>
+<p>The project aims to analyse the study area, East Kalimantan, in terms of the following:</p>
 <ul>
-<li>Location of primary, secondary, mixed and JC (i.e. Education).</li>
-<li>Outline map of Singapore (i.e. CoastalOutline).</li>
+<li>Population and demographic</li>
+<li>Economic and Businesses</li>
+<li>Transport and Communication</li>
+<li>Infrastructure</li>
+<li>Environment and Hazard</li>
 </ul>
-<h3 id="add-the-gis-data-into-qgis-project">1.1.1 Add the GIS data into QGIS Project</h3>
-<p>Before you can start to perform any analysis, you need to start a new QGIS project.</p>
-<blockquote>
-<p>DIY: Using the steps you had learned from last lesson, add the Education and CoastalOutline into the newly created QGIS project.</p>
-</blockquote>
-<h3 id="using-attribute-query-to-select-a-subset-from-a-master-layer">1.1.2 Using attribute query to select a subset from a master layer</h3>
+<p>There will be a site suitability analysis of the study area including its districts and sub-districts whereby the most suitable site would be recommended for the relocation.</p>
+<h1 id="scope-of-work">3.0 Scope of Work</h1>
+<ul>
+<li>Gather requirements
+<ul>
+<li>Collect Data</li>
+</ul></li>
+<li>Perform EDA
+<ul>
+<li>Data extraction</li>
+<li>Data integration</li>
+<li>Data transformation</li>
+<li>Data wrangling.</li>
+</ul></li>
+<li>Designing and building GIS model and database based on the project requirements</li>
+<li>Gather information/insights into various factors:
+<ul>
+<li>Population and demographic</li>
+<li>Economic and Businesses</li>
+<li>Transport and Communication</li>
+<li>Infrastructure</li>
+<li>Environment and Hazard</li>
+</ul></li>
+<li>Preparing report of survey</li>
+<li>Performing site suitability analysis by integrating GIS and multi-criteria evaluation methods.</li>
+<li>Preparing site suitability analysis report including detailed discussion of the analysing methods used.</li>
+<li>Preparing poster and project webpage.</li>
+<li>Share what we learnt throughout the whole project</li>
+</ul>
+<h1 id="project-timelineschedule">4.0 Project Timeline/Schedule</h1>
 <p>The Education layer consists of locations of education institutions such as primary schools, secondary school, mixed and JC. We are only interested on education institutions that belong to primary and secondary schools.</p>
 <blockquote>
 <p>DIY: Using the steps you had learned from last lesson, extract and save the primary and secondary schools in two separate GIS vector layers.</p>
 </blockquote>
 <p>Your screen should look similar to the figure below.</p>
 <p><img src="img/image1.jpg" /></p>
-<h1 id="raster-data-modelling">2.0 Raster Data Modelling</h1>
+<h1 id="data-source">5.0 Data Source</h1>
 <p>In this exercise, you will learn how to model raster data. The exercise focusses on how to rasterise a vector GIS data layer using QGIS geoprocessing functions.</p>
-<h2 id="editing-attribute-data">2.1 Editing attribute data</h2>
-<p>In this section, you will create a new field in the attribute table of a vector GIS data and update values of the newly created field. You will name the field as <em>POI_CODE</em>. The data type of this data field is integer.</p>
+<p>======= In this section, you will create a new field in the attribute table of a vector GIS data and update values of the newly created field. You will name the field as <em>POI_CODE</em>. The data type of this data field is integer.</p>
 <p>At <strong><em><del>Browser</del></em></strong> panel, right-click on the Primary Schools layer. Select <strong>Open Attribute Table</strong> from the context menu.</p>
-<p>The Attribute table dialog window of Primary Schools appears.test</p>
-<p>ahahahaha</p>
+<p>The Attribute table dialog window of Primary Schools appears.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
