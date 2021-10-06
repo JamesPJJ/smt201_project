@@ -60,15 +60,10 @@ There will be a site suitability analysis of the study area including its distri
 
 
 
-# 4.0 Project Timeline/Schedule
+# 4.0 Project Schedule
 
-The Education layer consists of locations of education institutions such as primary schools, secondary school, mixed and JC.  We are only interested on education institutions that belong to primary and secondary schools.
 
-> DIY: Using the steps you had learned from last lesson, extract and save the primary and secondary schools in two separate GIS vector layers.    
-
-Your screen should look similar to the figure below.
-
-![](img/image1.jpg)
+![](img/timeline.jpg)
 
 # 5.0 Data Source
 
