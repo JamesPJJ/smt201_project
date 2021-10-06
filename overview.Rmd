@@ -5,8 +5,8 @@ description: |
 author:
   - name: James
     url: https://example.com/norajones
-    affiliation: Spacely Sprockets
-    affiliation_url: https://example.com/spacelysprokets
+    affiliation: School of Computer and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg
 date: "`r Sys.Date()`"
 output:
   distill::distill_article:
