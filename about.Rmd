@@ -1,11 +1,9 @@
 ---
 title: "About this site"
 description: |
-  Some additional details about the website
+  This site is for SMT201 G1 T8 GIS Project.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-Testing too
