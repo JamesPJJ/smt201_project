@@ -75,16 +75,6 @@ There will be a site suitability analysis of the study area including its distri
 
 # 5.0 Data Source
 
-In this exercise, you will learn how to model raster data.  The exercise focusses on how to rasterise a vector GIS data layer using QGIS geoprocessing functions.   
-
-
-=======
-In this section, you will create a new field in the attribute table of a vector GIS data and update values of the newly created field.  You will name the field as *POI_CODE*.  The data type of this data field is integer.
-  
-At ***~~Browser~~*** panel, right-click on the Primary Schools layer.
-Select **Open Attribute Table** from the context menu.
-
-The Attribute table dialog window of Primary Schools appears.
 
 ```{r echo = FALSE, layout="l-body-outset"}
 library(knitr)
