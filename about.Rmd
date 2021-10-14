@@ -2,6 +2,25 @@
 title: "About this site"
 description: |
   This site is for SMT201 G1 T8 GIS Project.
+
+author:
+  - name: James Pang Jun jie
+    url: https://www.linkedin.com/in/jamespangjunjie/
+    affiliation: School of Computer and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg
+  - name: Huo Jiali
+    url: https://www.linkedin.com/in/jiali-huo-49131a1a8/
+    affiliation: School of Computer and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg
+  - name: Yao Jiawei
+    url: https://www.linkedin.com/in/jiawei-yao-898150174/
+    affiliation: School of Computer and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 4
 ---
 
 ```{r setup, include=FALSE}
