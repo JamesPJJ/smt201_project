@@ -58,7 +58,7 @@ There will be a site suitability analysis of the study area including its distri
 # 4.0 Project Schedule
 
 
-![](img/timeline.jpg)
+![](img/Timeline.jpg)
 
 # 5.0 Data Source
 
