@@ -1,7 +1,7 @@
 ---
 title: "SMT201 G1 T8 GIS Project Website"
 description: |
-  Welcome to the website. I hope you enjoy it testing!
+  Welcome to the website. I hope you enjoy it!
 site: distill::distill_website
 ---
 
