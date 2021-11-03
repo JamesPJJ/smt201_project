@@ -86,29 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>SMT201 GIS Project Website: Data Preparation</title>
+  <title>SMT201 GIS Project Website: Report of Survey</title>
 
-  <meta property="description" itemprop="description" content="This page will guide you through the data preparation and extraction which will be used for our report of survey and site selection."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="SMT201 GIS Project Website: Data Preparation"/>
+  <meta property="og:title" content="SMT201 GIS Project Website: Report of Survey"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="This page will guide you through the data preparation and extraction which will be used for our report of survey and site selection."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="SMT201 GIS Project Website"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="SMT201 GIS Project Website: Data Preparation"/>
-  <meta property="twitter:description" content="This page will guide you through the data preparation and extraction which will be used for our report of survey and site selection."/>
+  <meta property="twitter:title" content="SMT201 GIS Project Website: Report of Survey"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Data Preparation"]},{"type":"character","attributes":{},"value":["This page will guide you through the data preparation and extraction which will be used for our report of survey and site selection.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Report of Survey"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2053,7 +2050,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Data Preparation","description":"This page will guide you through the data preparation and extraction which will be used for our report of survey and site selection.","authors":[]}
+{"title":"Report of Survey","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2079,10 +2076,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Data Preparation</h1>
+<h1>Report of Survey</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>This page will guide you through the data preparation and extraction which will be used for our report of survey and site selection.</p></p>
+
 </div>
 
 
@@ -2091,165 +2088,56 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#data-source">1.0 Data Source</a></li>
-<li><a href="#data-extraction">2.0 Data extraction</a>
+<li><a href="#introduction">Introduction</a>
 <ul>
-<li><a href="#data-extraction-for-study-area">2.0.1 Data extraction for study area</a></li>
-<li><a href="#data-selection-for-topographical-data-layers">2.0.2 Data selection for topographical data layers</a></li>
-<li><a href="#data-extration-for-topographical-data-layers">2.0.3 Data extration for topographical data layers</a></li>
+<li><a href="#population-and-demographic">Population and Demographic</a></li>
+<li><a href="#economic-and-businesses">Economic and Businesses</a></li>
+<li><a href="#transport-and-communication">Transport and Communication</a></li>
+<li><a href="#infrastructure">Infrastructure</a></li>
+<li><a href="#environment-and-hazard">Environment and Hazard</a></li>
 </ul></li>
 </ul>
 </nav>
 </div>
-<h1 id="data-source">1.0 Data Source</h1>
-<p>Download all the data sources from the following links:</p>
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>DataSource</th>
-<th>DataFormat</th>
-<th>Description</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>OSM Buildings</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/12/download-shp-pemukiman-detail-seluruh.html" class="uri">https://www.indonesia-geospasial.com/2020/12/download-shp-pemukiman-detail-seluruh.html</a></td>
-</tr>
-<tr class="even">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>PENAJAM PASER UTARA</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html" class="uri">https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html</a></td>
-</tr>
-<tr class="odd">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>KUTAI KARTANEGARA</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html" class="uri">https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html</a></td>
-</tr>
-<tr class="even">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>KOTA SAMARINDA</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html" class="uri">https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html</a></td>
-</tr>
-<tr class="odd">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>KOTA BALIKPAPAN</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html" class="uri">https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html</a></td>
-</tr>
-<tr class="even">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>Titik Api Hotspot se-Indonesia Tahun 2014 - 2019</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/04/shapefile-shp-titik-api-hotspot.html" class="uri">https://www.indonesia-geospasial.com/2020/04/shapefile-shp-titik-api-hotspot.html</a></td>
-</tr>
-<tr class="odd">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>Geology Kalimantan Timur</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/03/download-data-shapefile-shp-geologi-se.html" class="uri">https://www.indonesia-geospasial.com/2020/03/download-data-shapefile-shp-geologi-se.html</a></td>
-</tr>
-<tr class="even">
-<td>Indonesia Geospatial</td>
-<td>Shape files</td>
-<td>East BATAS DESA DESEMBER 2019 DUKCAPIL KALIMANTAN TIMUR (Villiage boundary and population data for East Kalimantan 2019)</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html" class="uri">https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html</a></td>
-</tr>
-<tr class="odd">
-<td>Indonesia Geospatial</td>
-<td>TIF files</td>
-<td>Provinsi Kalimantan Timur</td>
-<td><a href="https://www.indonesia-geospasial.com/2020/01/download-dem-srtm-30-meter-se-indonesia.html" class="uri">https://www.indonesia-geospasial.com/2020/01/download-dem-srtm-30-meter-se-indonesia.html</a></td>
-</tr>
-</tbody>
-</table>
-<h1 id="data-extraction">2.0 Data extraction</h1>
-<h2 id="data-extraction-for-study-area">2.0.1 Data extraction for study area</h2>
-<p>When we download the <strong>BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR</strong> layer, it contains all the sub-districts, thus we need to extract the parts we focus on. <img src="img/BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR.png" /> Right click on the <strong>BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR</strong> layer, click <strong>Open Attribute Table</strong></p>
-<p>Click on Select by Expression <img src="img/Select%20by%20Expression.png" /> In the newly opened window, choose Fields: <strong>KECAMATAN</strong> Click <strong>“All Unique”</strong> and select these areas we need as shown below: <img src="img/Select%20Features.png" /> Click <strong>Select Features</strong> when the expression is completed.</p>
-<p>Go back to the main map, and we will see these areas are selected <img src="img/areas%20are%20selected.png" /> Right click on the <strong>BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR</strong> layer, click <strong>Export</strong> &gt; <strong>Export Selected Features As</strong> <img src="img/export.png" /></p>
-<p>Select the GeoPackage you want to save this layer to, and name this layer as <em>studyArea</em> Make sure the CRS is <strong>EPSG:23845 - DGN95 / Indonesia ™-3 zone 54.1</strong></p>
-<p><img src="img/Save%20Vector%20Layers.png" /> Click OK when everything is done Now we are able to see the study area which we will focus on <img src="img/studyArea.png" /> Up to here, we are done for the studyArea layer extraction.</p>
-<h2 id="data-selection-for-topographical-data-layers">2.0.2 Data selection for topographical data layers</h2>
-<p>For the topographical data layers of East Kalimantan. You are required to download data of <strong>Kota Balikpapan</strong>, <strong>Kota Samarinda</strong>, <strong>Penajam Paser Utara</strong> and <strong>Kutai Kartanegara</strong>. We translate the layer name to English and select these layers we need as below:</p>
+<h1 id="introduction">Introduction</h1>
+<p>The GIS report of survey includes the following themes:</p>
 <ul>
-<li>Administrasi - Administration</li>
-<li>Administrasi Kecamatan - Administration Districts</li>
-<li>Agrikebun - Agriculture</li>
-<li>Agriladang - Agrifield</li>
-<li>Agrisawah - Agriculture</li>
-<li>Airport - Airport</li>
-<li>Bangunan - Building</li>
-<li>Bendung - Dam</li>
-<li>Bendungan - Dam</li>
-<li>Danau - Lake</li>
-<li>Depogas - Gas Depot</li>
-<li>Depominyak - Oil Depot</li>
-<li>Dermaga - Dock</li>
-<li>Gardulistrik - Power house</li>
-<li>Genlistrik - electricity<br />
-</li>
-<li>Hankam - Defense and Security</li>
-<li>Heliport - Heliport</li>
-<li>Irigasi - Irrigation</li>
-<li>Jalan - Street</li>
-<li>Jembatan - Bridge</li>
-<li>Kabel Listrik - Power cable</li>
-<li>Kanal- canal</li>
-<li>Kantor Air Minum - drinking area</li>
-<li>Kantor Pos - Post office</li>
-<li>Kontur - Contour</li>
-<li>Layanan Kesehatan - Health services</li>
-<li>Menara Exploit Minyak - Oil Exploit Tower</li>
-<li>Menara Listrik - Electric Tower</li>
-<li>Menara Telepon - Telephone Tower</li>
-<li>Niaga - Commerce</li>
-<li>Nonagrialang - farming<br />
-</li>
-<li>Non Agri Hutan Basah - Non Agri Wet Forest</li>
-<li>Non Agri Hutan Kering - Non Agri Dry Forest</li>
-<li>Non Agri Semakbelukar - Non Agri Shrub</li>
-<li>Olahminyak - Petroleum processing</li>
-<li>Pelabuhan - Harbor</li>
-<li>Pemerintahan - Government</li>
-<li>Pemukiman - Settlement</li>
-<li>Pendidikan - Education</li>
-<li>Pesisir - Coastal</li>
-<li>Pipahidrokarbon - Hydrocarbons<br />
-</li>
-<li>Pusekemas - Health Center</li>
-<li>Rawa - Swamp</li>
-<li>Rumahsakit - Hospital</li>
-<li>Runway - Runway</li>
-<li>Sumurminyak - oil well</li>
-<li>Sungai - River</li>
-<li>Tamanwisata - park</li>
-<li>Tambak - pond</li>
-<li>Tambang - Mine</li>
-<li>Taxiway - Taxiway</li>
-<li>Terowong - Tunnel</li>
-<li>Waduk - reservoir</li>
+<li>Population and Demographic</li>
+<li>Economic and Businesses</li>
+<li>Transport and Communication</li>
+<li>Infrastructure</li>
+<li>Environment and Hazard</li>
 </ul>
-<h2 id="data-extration-for-topographical-data-layers">2.0.3 Data extration for topographical data layers</h2>
-<p>However, not all the layers are within our studyArea, as shown below</p>
-<p><img src="img/demo%20not%20fit.png" /> So we need to clip these layers within our studyArea. We need to use a plugin tool to help us achieve it.</p>
-<p>Click <strong>Plugins</strong> &gt; <strong>Manage and Install Plugins</strong>. Type in the plugin name: <strong>Clip Multiple Layers</strong>, and <strong>install</strong> this plugin. <img src="img/plugin.png" /> After installation is done, select these layers we need as stated in the above section.</p>
-<p><img src="img/select%20layers.png" /> Next,make sure all the layers that need to be clipped are selected, <strong>except studyArea</strong> And now click on the plugin we just installed</p>
-<p><img src="img/icon.png" /> And in the pop-up window, choose Selection: <strong>studyArea</strong> Select an output folder to store all the output layers</p>
-<p><img src="img/clipMultipleLayers.png" /> Click <strong>OK</strong> when is done. It will take a while to process the clipping, after that you will be able to see the output layers</p>
-<p><img src="img/clippedLayers.png" /> Now the output layers all fit into our studyArea. Repeat the above steps for other layers for different sub-districts.</p>
+<h2 id="population-and-demographic">Population and Demographic</h2>
+<p><img src="img/aged20-25.png" /> From the number of people aged 20 to 55 distribution map, we can see that the young and mid-aged people are mainly located in Kota Samarinda and Kota Balikpapan. This group of people is representative in terms of industry advancement for that particular state. The more people that are aged 20 to 55 located at, the more labor intensive this state is. Another aspect we can see from this map is that people prefer to live near the coastline rather than inland.</p>
+<p><img src="img/islam.png" /> As we can see that the distribution of the number of people who believe in Islam is similar to the distribution for the number of people aged 25 - 60 in Kalimantan Timur. The reason for the similar distribution is that Islam is the main religion for most Indonesians. Similarly, the distribution has the largest population in Kota Samarinda and Kota Balikpapan, which are located near the coastline.</p>
+<p><img src="img/otherReligion.png" /> Due to the small proportion of the population for people who believe in religions other than Islam, we are using the same internal method to classify the distribution for the number of people who believe in other religions (Christian, Catholic, Hindu, Buddha, Confucianism, Free Thinker). As we can see from the graph, the largest number of people who believe in other religions are distributed in Kota Balikpapan, and followed by the second largest proportion in Kota Samarinda. There are a few residents in Kutai Kartanegara area which is between Kota Samarinda and Penajam Paser Utara.</p>
+<p><img src="img/gender.png" /> To study the gender distribution, we use the index which is formulated as the number of males minus the number of females to measure it. As we can see that there are more males than females in Kota Balikpapan and the area between Kota Samarinda. This may indicate that such areas are in development and more labour are needed to build the infrastructure and heavy industries as they would require more male than female for production.</p>
+<p><img src="img/school.png" /></p>
+<p>In terms of education resources, we have consolidated some schools including junior high schools, high schools and diploma schools in Kalimantan Timur. As we can see that the main schools are located in Kota Balikpapan and Kota Samarinda, similar to the population aged 20 - 55 distribution. This also indicates that these areas have better infrastructure and resources.</p>
+<h2 id="economic-and-businesses">Economic and Businesses</h2>
+<p>The economy in East Kalimantan revolves around oil and gas processing and to a smaller extent, agriculture. For economic aspects, mines will also be looked into as it was a major economic activity in Samarinda. Thus, when relocating the city, the areas used for the major economy in the study area would be looked into so that minimal disturbance to these areas would be taken into consideration.</p>
+<p><img src="img/agriculture.png" /></p>
+<p>This graph shows the distributions of agriculture related areas in the study area. From the graph, we can see that most of the larger plots of land used for agriculture are in Penjaman Paser Utara. Smaller plots of land are scattered around Kutai Kartanegara, at the outskirts of the city of the province, Samarinda. Compared to the large size of land used in Penjamin Paser Utara and Kutai Kartanegrara, the area used in Samarinda and Balikpapan are relatively smaller. This is expected as agriculture is not the main economic activity in these two cities.</p>
+<p><img src="img/oil.png" /> This graph shows the point distribution of where oil or petroleum depots and processing facility are. This is the major economic activity of East Kalimantan. It is seen that that these points cover the east side of the study area and is mainly in Kutai Kartenegara, This shows a higher significance of Oil and Petroleum processing in Kutai Kartenegara.</p>
+<p><img src="img/gasProcessing.png" /> This graph shows the distribution of gas processing facilities in the study area. Compared to oil/petroleum processing facilities, it is seen that there is a lesser count of such facilities for gas processing. In the study area, only an offshore area in Kutai Kartanegara houses this facility.</p>
+<p><img src="img/mines.png" /> This graph shows the distribution of mines in the study area. It is seen that mines are concentrated in and around Samarinda, where mining activities were once popular in. In the study area of Penjamin Paser Utara and Balikpapan, there seems to be a lack of such land use in these area. Land used for mining could be a consideration when selecting the area for the city as it would involve additional economic cost added to recover the land and the potential of floods.</p>
+<p><img src="img/keyIndustry.png" /></p>
+<p>The above graph shows a distribution of key industry facilities covered earlier. These facilities are located outside of the main city of Kota Samarinda, in Kutai Kartanegara and also in Kota Balikpapan.</p>
+<h2 id="transport-and-communication">Transport and Communication</h2>
+<p><img src="img/transport.png" /></p>
+<p>This graph shows the distribution of airports and seaports (harbour and docks) in our study area. It is seen from the map that there are two airports in our study area, one in Balikpapan and the other in Samarinda, the two cities in the study area. These two areas would be more accessible due to the larger number of islands in Indonesia. There would be a need to travel by air for transportation. For seaports there seems to be two clusters, one along the borders of and between Balikpapan and Penjaman Paser Utara and the other in from the east of the study area and cutting across Samarinda. Seaports are useful for shorter distance travel as well as cargo shipment, which would be important factors for accessibility.</p>
+<p><img src="img/street.png" /> The graphs shows a distribution of road networks in the study area. While there seems to be a closely connected study area there seems to be pockets of area in Kutai Kartanegara with less accessibility as the road networks are not as dense. In addition, towards the Southeast region of Penjaman Paser Utara and Northeast region of Kota Balikpapan, it can be seen that large areas of land are not covered by the road network and would make these land quite inaccessible.</p>
+<p><img src="img/cellTelephone.png" /> The graph shows a distribution of cell towers in the study area. It is seen from the graph that there is a big cluster of towers in Samarinda. Two other regions, Kota Balikpapan and Kutai Kartanegara have towers widely dispersed throughout. Penjaman Paser Utara has relatively low count of the towers compared to the other three regions. Thus, better network connectivity would be at Kota Samrinda followed by Kota Balikpapan and Kutai Kartanegara and then at Penjaman Paser Utara</p>
+<h2 id="infrastructure">Infrastructure</h2>
+<p><img src="img/powerHouse.png" /> Electric power infrastructure provides the substrate for modern life. The map above shows the distribution of electricity power house in East Kalimantan. From the map, we can see the distributions are very uneven. The electricity power houses are mainly located in Kota Samarinda and Kutai Kartanegara, which is understandable as Samarinda is the capital city of the Indonesian province of East Kalimantan. Moreover, we can see that power houses rarely appear in Kota Balikpapan and Penajam Paser Utara as those areas are not well developed compared to the other two districts.</p>
+<p><img src="img/drinkingWater.png" /> For water infrastructure, the map above shows the distribution of drinking water and irrigation in East Kalimantan. We can see the drinking water tower is quite evenly distributed except for Penajam Paser Utara. And even if the irrigations are evenly distributed among the four districts, there are not many irrigation water networks in this area.</p>
+<p><img src="img/healthCare.png" /> The map above shows the distribution of Hospitals and Health Services &amp; Centers. We can see the red plus SVG mark represents Hospital. Surprisingly, the number of hospitals in East Kalimantan is not many, and medical facilities are indispensable in human life. However, there are a lot of Health Services &amp; Centers and they are evenly distributed in East Kalimantan. Kota Samarinda and Kota Balikpapan are more populous and more developed. In contrast, the medical conditions will also be better. In addition, the people who are not living in Kota Samarinda and Kota Balikpapan may prefer to go Health centers because the cost will be cheaper than hospitals.</p>
+<p><img src="img/educational.png" /> Education is important in life because it gives people the skills to navigate the world. The map above shows the distribution of Educational Institutes in East Kalimantan. The schools are not very evenly distributed. Even though there are schools in all distinct areas on the map, it is still not difficult to see that the schools in Kota Samarinda and Kota Balikpapan are denser. I think this has a lot to do with the population density of those two distinct.</p>
+<h2 id="environment-and-hazard">Environment and Hazard</h2>
+<p><img src="img/wetForest.png" /> East Kalimantan has an area of 21,144 km2 which occupies about 11% of the whole country. From the map above, we can see the distribution of Non-Agri Wet Forest, Dry Forest and Shrub. The area of forest and shrubs can cover almost the entire East Kalimantan.</p>
+<p><img src="img/forestFire.png" /> Plant logging occurs frequently in East Kalimantan. Heavy logging activities have made the forests a fire hazard. From the map above, we can see the distribution of Forest Fire Spot in 2019, the forest fires occurred frequently. The occurrence of fires reduced forest coverage, which gave negative effects on the environment. Frequent logging activities and forest fires make it easier for locals to deplete natural resources, and caused a major impact on the economy, culture and health of the society.</p>
+<p><img src="img/coastLine.png" /> From the map above, we can see the blue line is the coastline for East Kalimantan. East Kalimantan has a tropical climate with two seasons, the dry season and the rainy season. Moreover, because it is close to the sea, the temperature depends on the area of the ocean surface and the distance from the beach.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
