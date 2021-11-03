@@ -8,7 +8,7 @@ navbar:
     - text: "Proposal"
       href: overview.html
     - text: "Data Preparation"
-      href: .html
+      href: dataPreparation.html
     - text: "Report of Survey"
       href: survey.html
     - text: "Site Selection Report"
