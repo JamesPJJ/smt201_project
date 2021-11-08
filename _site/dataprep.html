@@ -2092,11 +2092,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3>Contents</h3>
 <ul>
 <li><a href="#data-source">1.0 Data Source</a></li>
-<li><a href="#data-extraction">2.0 Data extraction</a>
+<li><a href="#data-extraction">2.0 Data Extraction</a>
 <ul>
-<li><a href="#data-extraction-for-study-area">2.0.1 Data extraction for study area</a></li>
-<li><a href="#data-selection-for-topographical-data-layers">2.0.2 Data selection for topographical data layers</a></li>
-<li><a href="#data-extration-for-topographical-data-layers">2.0.3 Data extration for topographical data layers</a></li>
+<li><a href="#data-extraction-for-study-area">2.1 Data extraction for study area</a></li>
+<li><a href="#data-selection-for-topographical-data-layers">2.2 Data selection for topographical data layers</a></li>
+<li><a href="#data-extration-for-topographical-data-layers">2.3 Data extration for topographical data layers</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2175,14 +2175,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </tr>
 </tbody>
 </table>
-<h1 id="data-extraction">2.0 Data extraction</h1>
-<h2 id="data-extraction-for-study-area">2.0.1 Data extraction for study area</h2>
+<h1 id="data-extraction">2.0 Data Extraction</h1>
+<h2 id="data-extraction-for-study-area">2.1 Data extraction for study area</h2>
 <p>When we download the <strong>BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR</strong> layer, it contains all the sub-districts, thus we need to extract the parts we focus on. <img src="img/BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR.png" /> Right click on the <strong>BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR</strong> layer, click <strong>Open Attribute Table</strong></p>
 <p>Click on Select by Expression <img src="img/Select%20by%20Expression.png" /> In the newly opened window, choose Fields: <strong>KECAMATAN</strong> Click <strong>“All Unique”</strong> and select these areas we need as shown below: <img src="img/Select%20Features.png" /> Click <strong>Select Features</strong> when the expression is completed.</p>
 <p>Go back to the main map, and we will see these areas are selected <img src="img/areas%20are%20selected.png" /> Right click on the <strong>BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR</strong> layer, click <strong>Export</strong> &gt; <strong>Export Selected Features As</strong> <img src="img/export.png" /></p>
 <p>Select the GeoPackage you want to save this layer to, and name this layer as <em>studyArea</em> Make sure the CRS is <strong>EPSG:23845 - DGN95 / Indonesia ™-3 zone 54.1</strong></p>
 <p><img src="img/Save%20Vector%20Layers.png" /> Click OK when everything is done Now we are able to see the study area which we will focus on <img src="img/studyArea.png" /> Up to here, we are done for the studyArea layer extraction.</p>
-<h2 id="data-selection-for-topographical-data-layers">2.0.2 Data selection for topographical data layers</h2>
+<h2 id="data-selection-for-topographical-data-layers">2.2 Data selection for topographical data layers</h2>
 <p>For the topographical data layers of East Kalimantan. You are required to download data of <strong>Kota Balikpapan</strong>, <strong>Kota Samarinda</strong>, <strong>Penajam Paser Utara</strong> and <strong>Kutai Kartanegara</strong>. We translate the layer name to English and select these layers we need as below:</p>
 <ul>
 <li>Administrasi - Administration</li>
@@ -2242,7 +2242,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Terowong - Tunnel</li>
 <li>Waduk - reservoir</li>
 </ul>
-<h2 id="data-extration-for-topographical-data-layers">2.0.3 Data extration for topographical data layers</h2>
+<h2 id="data-extration-for-topographical-data-layers">2.3 Data extration for topographical data layers</h2>
 <p>However, not all the layers are within our studyArea, as shown below</p>
 <p><img src="img/demo%20not%20fit.png" /> So we need to clip these layers within our studyArea. We need to use a plugin tool to help us achieve it.</p>
 <p>Click <strong>Plugins</strong> &gt; <strong>Manage and Install Plugins</strong>. Type in the plugin name: <strong>Clip Multiple Layers</strong>, and <strong>install</strong> this plugin. <img src="img/plugin.png" /> After installation is done, select these layers we need as stated in the above section.</p>

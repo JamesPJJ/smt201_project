@@ -31,8 +31,8 @@ Indonesia Geospatial|	TIF files |	Provinsi Kalimantan Timur |	https://www.indone
 
 
 
-# 2.0 Data extraction
-## 2.0.1 Data extraction for study area
+# 2.0 Data Extraction
+## 2.1 Data extraction for study area
 
 
 When we download the **BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR** layer, it contains all the sub-districts, thus we need to extract the parts we focus on.
@@ -61,7 +61,7 @@ Now we are able to see the study area which we will focus on
 Up to here, we are done for the studyArea layer extraction.
 
 
-## 2.0.2 Data selection for topographical data layers
+## 2.2 Data selection for topographical data layers
 
 For the topographical data layers of East Kalimantan. You are required to download data of **Kota Balikpapan**, **Kota Samarinda**, **Penajam Paser Utara** and **Kutai Kartanegara**. We translate the layer name to English and select these layers we need as below:
 
@@ -121,7 +121,7 @@ For the topographical data layers of East Kalimantan. You are required to downlo
 
 
 
-## 2.0.3 Data extration for topographical data layers
+## 2.3 Data extration for topographical data layers
 
 However, not all the layers are within our studyArea, as shown below
 
