@@ -112,7 +112,7 @@ In addition, the people who are not living in Kota Samarinda and Kota Balikpapan
 
 ## 4.4 Educational Institutions
 ![](img/educational.png)
-Education is important in life because it gives people the skills to navigate the world. The map above shows the distribution of Educational Institutes in East Kalimantan.  The schools are not very evenly distributed. Even though there are schools in all distinct areas on the map, it is still not difficult to see that the schools in Kota Samarinda and Kota Balikpapan are denser. I think this has a lot to do with the population density of those two distinct. 
+Education is important in life because it gives people the skills to navigate the world. The map above shows the distribution of Educational Institutes in East Kalimantan.  The schools are not very evenly distributed. Even though there are schools in all districts on the map, it is still not difficult to see that the schools in Kota Samarinda and Kota Balikpapan are denser. I think this has a lot to do with the population density of those two districts.
 
 # 5.0 Environment and Hazard
 
