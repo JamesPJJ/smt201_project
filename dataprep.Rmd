@@ -32,7 +32,7 @@ Indonesia Geospatial|	TIF files |	Provinsi Kalimantan Timur |	https://www.indone
 
 
 # 2.0 Data Extraction
-## 2.1 Data extraction for study area
+## 2.1.2 Data extraction for study area
 
 
 When we download the **BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR** layer, it contains all the sub-districts, thus we need to extract the parts we focus on.
