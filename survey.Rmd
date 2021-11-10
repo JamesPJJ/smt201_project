@@ -173,12 +173,15 @@ For Input layers, click ... to choose layers.
 Choose the **electricity** and **powerhouse** layers within the four districts.
 
 ![](img/coloredStudyArea5.png)
+
 * Click **OK**
 * Select CRS to **EPSG:23845**. 
 
 ![](img/coloredStudyArea6.png)
-Click **Run**
-A temporary Merged layer will be created.
+Click **Run**.
+A temporary Merged layer will be created:
+![](img/powerHouse.png)
+
 
 Repeat the above steps for other study layers.
 
