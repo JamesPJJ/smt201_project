@@ -10,7 +10,7 @@ navbar:
     - text: "Data Preparation"
       href: dataprep.html
     - text: "Report of Survey"
-      href: survey.html
+      href: survey234.html
     - text: "Site Selection Report"
       href: site.html
   right:
