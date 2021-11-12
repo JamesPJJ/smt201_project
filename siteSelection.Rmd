@@ -55,7 +55,7 @@ Click **OK**.
 
 
 ## 1.4 Computing forest fire density
-### Creating density for forest fires
+### 1.4.1 Creating density for forest fires
 We will use the merged_all_fire to create a density map for forest fires. 
 Search for **“kernel density”** in the processing toolbox and select **“Heatmap (Kernel Density Estimation)”** as shown below
 
@@ -208,7 +208,7 @@ Repeat the steps above to generate the proximity map layers for other **merged l
 Because of the difference scales upon which criteria are measured, it is necessary that factors be standardized before combination using the formulas below:
 ![](img/siteSelection18.png)
 
-## 3.1.1 factor_eco
+### 3.1.1 factor_eco
 
 * To get the **max(x)** value, open the Attribute table of the **Slope** layer.
 * Click on the Information tab, scroll down to find the **Max** Value.

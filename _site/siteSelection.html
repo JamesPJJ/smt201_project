@@ -2095,7 +2095,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#computing-slope">1.3 Computing slope</a></li>
 <li><a href="#computing-forest-fire-density">1.4 Computing forest fire density</a>
 <ul>
-<li><a href="#creating-density-for-forest-fires">Creating density for forest fires</a></li>
+<li><a href="#creating-density-for-forest-fires">1.4.1 Creating density for forest fires</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#computing-factor-data">2.0 Computing Factor Data</a>
@@ -2109,8 +2109,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul></li>
 <li><a href="#raster-based-gis-multiplecriteria-decision-analysis-gis-mcda">3.0 Raster-based GIS Multiple‐Criteria Decision Analysis (GIS-MCDA)</a>
 <ul>
-<li><a href="#standardising-the-factor-scores">3.1 Standardising the factor scores</a></li>
+<li><a href="#standardising-the-factor-scores">3.1 Standardising the factor scores</a>
+<ul>
 <li><a href="#factor_eco">3.1.1 factor_eco</a></li>
+</ul></li>
 <li><a href="#performing-ahp-analysis">3.2 Performing AHP Analysis</a></li>
 <li><a href="#computing-the-suitability-layer">3.3 Computing the Suitability Layer</a></li>
 </ul></li>
@@ -2175,7 +2177,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Export the temporary layer to Geopackage, name it to <strong>Slope</strong>. Click <strong>Calculate From Layer</strong> -&gt; Choose <strong>StudyArea</strong>. Horizontal: <strong>5</strong> Vertical: <strong>5</strong> Click <strong>OK</strong>.</p>
 <p><img src="img/siteSelection9.png" /></p>
 <h2 id="computing-forest-fire-density">1.4 Computing forest fire density</h2>
-<h3 id="creating-density-for-forest-fires">Creating density for forest fires</h3>
+<h3 id="creating-density-for-forest-fires">1.4.1 Creating density for forest fires</h3>
 <p>We will use the merged_all_fire to create a density map for forest fires. Search for <strong>“kernel density”</strong> in the processing toolbox and select <strong>“Heatmap (Kernel Density Estimation)”</strong> as shown below</p>
 <p><img src="img/siteSelection10.png" /></p>
 <p>A window will appear and fill in the fields as such.</p>
@@ -2285,7 +2287,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="raster-based-gis-multiplecriteria-decision-analysis-gis-mcda">3.0 Raster-based GIS Multiple‐Criteria Decision Analysis (GIS-MCDA)</h1>
 <h2 id="standardising-the-factor-scores">3.1 Standardising the factor scores</h2>
 <p>Because of the difference scales upon which criteria are measured, it is necessary that factors be standardized before combination using the formulas below: <img src="img/siteSelection18.png" /></p>
-<h2 id="factor_eco">3.1.1 factor_eco</h2>
+<h3 id="factor_eco">3.1.1 factor_eco</h3>
 <ul>
 <li>To get the <strong>max(x)</strong> value, open the Attribute table of the <strong>Slope</strong> layer.</li>
 <li>Click on the Information tab, scroll down to find the <strong>Max</strong> Value.</li>
