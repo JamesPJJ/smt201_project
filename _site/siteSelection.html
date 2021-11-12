@@ -86,29 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>SMT201 GIS Project Website: SMT201 G1 T8 GIS Project Website</title>
+  <title>SMT201 GIS Project Website: Site Selection</title>
 
-  <meta property="description" itemprop="description" content="Welcome to the website. I hope you enjoy it!"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="SMT201 GIS Project Website: SMT201 G1 T8 GIS Project Website"/>
+  <meta property="og:title" content="SMT201 GIS Project Website: Site Selection"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Welcome to the website. I hope you enjoy it!"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="SMT201 GIS Project Website"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="SMT201 GIS Project Website: SMT201 G1 T8 GIS Project Website"/>
-  <meta property="twitter:description" content="Welcome to the website. I hope you enjoy it!"/>
+  <meta property="twitter:title" content="SMT201 GIS Project Website: Site Selection"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["SMT201 G1 T8 GIS Project Website"]},{"type":"character","attributes":{},"value":["Welcome to the website. I hope you enjoy it!\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Site Selection"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2053,7 +2050,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"SMT201 G1 T8 GIS Project Website","description":"Welcome to the website. I hope you enjoy it!","authors":[]}
+{"title":"Site Selection","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2064,7 +2061,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="index.html" class="title">SMT201 GIS Project Website</a>
 <a href="overview.html">Proposal</a>
 <a href="dataprep.html">Data Preparation</a>
-<a href="survey.html">Report of Survey</a>
+<a href="survey234.html">Report of Survey</a>
 <a href="siteSelection.html">Site Selection Report</a>
 </div>
 <div class="nav-right">
@@ -2079,14 +2076,300 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>SMT201 G1 T8 GIS Project Website</h1>
+<h1>Site Selection</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Welcome to the website. I hope you enjoy it!</p></p>
+
 </div>
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">1.0 Introduction</a>
+<ul>
+<li><a href="#layers-we-need">1.1 Layers we need</a></li>
+<li><a href="#volcano">1.2 Volcano</a></li>
+<li><a href="#computing-slope">1.3 Computing slope</a></li>
+<li><a href="#computing-forest-fire-density">1.4 Computing forest fire density</a>
+<ul>
+<li><a href="#creating-density-for-forest-fires">Creating density for forest fires</a></li>
+</ul></li>
+<li><a href="#computing-proximity-for-all-the-merged-layers">1.5 Computing proximity for all the merged layers</a>
+<ul>
+<li><a href="#creating-attribute-field-for-rasterising">1.5.1 Creating attribute field for rasterising</a></li>
+<li><a href="#rasterising-merged_street-layer">1.5.2 Rasterising Merged_Street layer</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#raster-based-gis-multiplecriteria-decision-analysis-gis-mcda">2.0 Raster-based GIS Multiple‐Criteria Decision Analysis (GIS-MCDA)</a>
+<ul>
+<li><a href="#standardising-the-factor-scores">2.1 Standardising the factor scores</a></li>
+<li><a href="#factor_eco">2.2 Factor_eco</a></li>
+</ul></li>
+<li><a href="#performing-ahp-analysis">3.0 Performing AHP Analysis</a></li>
+<li><a href="#computing-the-suitability-layer">4.0 Computing the Suitability Layer</a></li>
+<li><a href="#identifying-suitable-sites">5.0 Identifying Suitable Sites</a>
+<ul>
+<li><a href="#vectorise-suitable-sites">5.1 Vectorise suitable sites</a></li>
+</ul></li>
+<li><a href="#final-steps-for-site-selections">6.0 Final steps for site selections:</a></li>
+</ul>
+</nav>
+</div>
+<h1 id="introduction">1.0 Introduction</h1>
+<h2 id="layers-we-need">1.1 Layers we need</h2>
+<p>Layers we need:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Requirements</th>
+<th>Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It should avoid steep slope.</td>
+<td>slope</td>
+</tr>
+<tr class="even">
+<td>It should be away from potential natural disaster risk areas such as sea coasts, major rivers and volcanoes.</td>
+<td>Merged_coastline, merged_river</td>
+</tr>
+<tr class="odd">
+<td>It should be near to current urban settlement areas but not at the current major settlement areas.</td>
+<td>merged_osm</td>
+</tr>
+<tr class="even">
+<td>It should avoid natural forest as much as possible.</td>
+<td>merged_forest</td>
+</tr>
+<tr class="odd">
+<td>It should avoid areas prone to forest fire.</td>
+<td>merged_fire</td>
+</tr>
+<tr class="even">
+<td>It should be highly accessible via road transport</td>
+<td>merged_street</td>
+</tr>
+<tr class="odd">
+<td>It should be near to airport(s) and seaport(s).</td>
+<td>merged_transport</td>
+</tr>
+</tbody>
+</table>
+<h2 id="volcano">1.2 Volcano</h2>
+<p>According to our research on volcano distribution in Indonesia, we found out that there are 147 volcanoes in Indonesia as of 2021. Most of the volcanoes are distributed in Java and Sumatra area (Volcanoes of Indonesia 2021)</p>
+<p><img src="img/siteSelection38.png" /> The hazard level of volcano for Kalimantan Timur is very low due to no active volcano in Kalimantan Timur(Kalimantan Timur 2021). This shows the impact of volcanic eruption is unnecessarily needed to take into consideration when determining the site selection for the new capital city. Therefore, we conclude that the volcano distribution factor will not affect the site selection in our analysis.</p>
+<h2 id="computing-slope">1.3 Computing slope</h2>
+<p>From the menu bar, select <strong>Raster</strong> -&gt; <strong>Analysis</strong> -&gt; <strong>Slope</strong>. Slope dialog window appears. For <strong>Input layer</strong>, select <strong>DEM</strong> from the drop-down list. Keep the rest of the setting as default. Click on the <strong>Run</strong> button. When the computation is completed, a temporary layer called Slope will be added in the QGIS project.</p>
+<p><img src="img/siteSelection8.png" /></p>
+<p>Export the temporary layer to Geopackage, name it to <strong>Slope</strong>. Click <strong>Calculate From Layer</strong> -&gt; Choose <strong>StudyArea</strong>. Horizontal: <strong>5</strong> Vertical: <strong>5</strong> Click <strong>OK</strong>.</p>
+<p><img src="img/siteSelection9.png" /></p>
+<h2 id="computing-forest-fire-density">1.4 Computing forest fire density</h2>
+<h3 id="creating-density-for-forest-fires">Creating density for forest fires</h3>
+<p>We will use the merged_all_fire to create a density map for forest fires. Search for <strong>“kernel density”</strong> in the processing toolbox and select <strong>“Heatmap (Kernel Density Estimation)”</strong> as shown below</p>
+<p><img src="img/siteSelection10.png" /></p>
+<p>A window will appear and fill in the fields as such.</p>
+<ul>
+<li>Point Layer: <strong>merged_all_fire</strong></li>
+<li>Radius: <strong>20000</strong></li>
+<li>Pixel Size X: <strong>50</strong></li>
+<li>Pixel Size Y: <strong>50</strong></li>
+</ul>
+<p><img src="img/siteSelection11.png" /></p>
+<ul>
+<li><p>Click on <strong>Run</strong> Notice that a temporary layer called Heatmap has been added in QGIS project. Export the rasterized layer to Geopackage and name it as <strong>merged_fire_density layer</strong>.</p></li>
+<li><p>We can modify the symbology of this layer to gain better clarity of the resulting layer.</p></li>
+<li><p>Go to its <strong>Properties</strong> -&gt; <strong>Symbology</strong></p></li>
+<li><p>Fill in the fields as such Render Type: <strong>Singleband Pseudocolour</strong> Colour Ramp: <strong>Reds</strong></p></li>
+</ul>
+<p><img src="img/siteSelection12.png" /></p>
+<ul>
+<li>Click on <strong>OK</strong></li>
+</ul>
+<h2 id="computing-proximity-for-all-the-merged-layers">1.5 Computing proximity for all the merged layers</h2>
+<h3 id="creating-attribute-field-for-rasterising">1.5.1 Creating attribute field for rasterising</h3>
+<p>Merged_Street Before we can rasterise the Merged_street layer, we need to add a control attribute field in the street layer.</p>
+<ul>
+<li><p>At the <strong>Layers</strong> panel, click on <strong>Merged_street</strong> layer to make it active.</p></li>
+<li><p>From the icon bar, click on the Open <strong>Attribute Table</strong> icon . The attribute table of <strong>Merged_street layer</strong> appears.</p></li>
+<li><p>From the menu bar of the Merged_street layer attribute table, click on the <strong>Open field calculator</strong> icon. The Field Calculator dialog window appears.</p></li>
+<li><p>Keep <strong>Create a new field</strong> option checks.</p></li>
+<li><p>For <strong>Output field</strong> name, type POI_CODE.</p></li>
+<li><p>At the <strong>Expression</strong> pane, type 1.</p></li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/siteSelection12.jpg" /></p>
+<ul>
+<li>Click on <strong>OK</strong> button to run the function. Notice that a new field called POI_CODE has been added into the attribute table of <strong>Merged_street</strong> GIS layer. Also note that all the records are indicated with POI_CODE values equals to 1.</li>
+</ul>
+<h3 id="rasterising-merged_street-layer">1.5.2 Rasterising Merged_Street layer</h3>
+<p>Now we need to rasterize all the merged layers in the table above.</p>
+<p>From the menu bar, select <strong>Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster)</strong>.</p>
+<p><img src="img/siteSelection13.png" /></p>
+<p>In the Rasterize (Vector to Raster) window,</p>
+<ul>
+<li>Choose Input layer: <strong>Merged_Street</strong></li>
+<li>For Field to use for a burn-in value, select <strong>POI_CODE</strong> from the drop-down list.</li>
+<li>Output raster size units: <strong>Georeferenced units</strong></li>
+<li>Width: <strong>50</strong></li>
+<li>Height: <strong>50</strong></li>
+<li>For Output extent, click on <strong>Calculate from Layer</strong>.</li>
+<li>Select <strong>DEM</strong> from the drop-down list.</li>
+</ul>
+<p>When you are ready, Click on <strong>Run</strong> button.</p>
+<p><img src="img/siteSelection14.png" /> When the operation ended, the dialog window will display the operation log.</p>
+<ul>
+<li><p>Read the output display to ensure that the process has completed without any error. After confirming that there is no error. You can close the dialog window.</p></li>
+<li><p>Click on <strong>Close</strong> button.</p></li>
+</ul>
+<p>Notice that a temporary layer called <strong>Rasterized</strong> has been added in QGIS project. Export the rasterized layer to Geopackage and name it as <strong>Rasterized_street</strong> layer.</p>
+<p><img src="img/siteSelection15.png" /></p>
+<ul>
+<li>Repeat the steps above to generate the raster layers for other <strong>merged layers</strong> in the table above.</li>
+<li>The layers below should be prepared before proceeding.
+<ul>
+<li>Rasterized_forest</li>
+<li>Rasterized_river</li>
+<li>Rasterized_coastline</li>
+<li>Rasterized_Transportation(Seaport &amp; Airport)</li>
+<li>Rasterized_studyArea</li>
+</ul></li>
+</ul>
+<p>For the <strong>Settlement</strong> part, we are going to use different steps to achieve the raster layer. We need to create a buffer layer for the merged_osm layer, because there are about 512,000 polygons of data in the merged_osm layer. Creating the buffer and dissolving them will improve the efficiency of exporting.</p>
+<ul>
+<li>Click on merged_osm layer. Then go <strong>Vector-&gt; Geoprocessing Tools -&gt; Buffer</strong></li>
+<li>Distance: <strong>100m</strong></li>
+<li>Check <strong>Dissolve result</strong></li>
+</ul>
+<p><img src="img/siteSelection16.png" /></p>
+<ul>
+<li>A temporary layer called Buffer will be shown. Export it to Geopackge and name it as Merged_osm_buffer.</li>
+<li>Rasterized the Merged_osm_buffer layer by following the steps above to get Raterized_osm_buffer.</li>
+</ul>
+<p>###1.5.3 Working with Proximity function of QGIS</p>
+<p>Now we will create a proximity layer: Click Raster &gt; Analysis &gt; Proximity (Raster Distance) The Proximity (Raster Distance) dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select <strong>Rasterized_street</strong> from the drop-down list.</li>
+<li>For <strong>Distance units</strong>, select <strong>Georeferenced coordinates</strong> from the drop-down list.</li>
+<li>For <strong>Output data type</strong>, select Float32 from the drop-down list.</li>
+</ul>
+<p><img src="img/siteSelection17.png" /></p>
+<ul>
+<li>Click <strong>Run</strong> when you are ready.</li>
+<li>A temporary layer called <strong>Proximity map</strong> is created and added in QGIS project.</li>
+<li>Save the newly computed <strong>proximity map</strong> into GeoPackage format with a resolution of 50 x 50m. Call the layer <strong>prox_street</strong>. Next, remove the <strong>Proximity map</strong> layer from QGIS.</li>
+</ul>
+<p>Repeat the steps above to generate the proximity map layers for other <strong>merged layers</strong> in the table above.</p>
+<ul>
+<li>The layers below should be prepared to proceed.
+<ul>
+<li>Slope</li>
+<li>prox_forest</li>
+<li>prox_river</li>
+<li>prox_coastline</li>
+<li>prox_Transportation(Seaport &amp; Airport)</li>
+<li>prox_osm_buffer</li>
+</ul></li>
+</ul>
+<h1 id="raster-based-gis-multiplecriteria-decision-analysis-gis-mcda">2.0 Raster-based GIS Multiple‐Criteria Decision Analysis (GIS-MCDA)</h1>
+<h2 id="standardising-the-factor-scores">2.1 Standardising the factor scores</h2>
+<p>Because of the difference scales upon which criteria are measured, it is necessary that factors be standardized before combination using the formulas below: <img src="img/siteSelection18.png" /></p>
+<h2 id="factor_eco">2.2 Factor_eco</h2>
+<ul>
+<li>To get the <strong>max(x)</strong> value, open the Attribute table of the <strong>Slope</strong> layer.</li>
+<li>Click on the Information tab, scroll down to find the <strong>Max</strong> Value.</li>
+</ul>
+<p><img src="img/siteSelection19.png" /></p>
+<ul>
+<li>Open the Processing Toolbox, type <strong>Raster calculator</strong>.</li>
+<li>Click on the Raster <strong>calculator</strong>.</li>
+</ul>
+<p><img src="img/siteSelection20.png" /></p>
+<p>Enter the expression below: <strong>1 - ( (“<a href="mailto:slope_@1" class="email">slope_@1</a>” -0 ) / (37.7335624695 - 0 ) ) </strong></p>
+<p><img src="img/siteSelection22.png" /></p>
+<ul>
+<li>Reference Layer: <strong>Slope</strong></li>
+<li>Click on Run button. A temporary layer <strong>Output</strong> will appear.</li>
+<li>Export the layer to <strong>Geopackage</strong>.</li>
+<li>Layer_name: <strong>factor_eco</strong></li>
+<li>CRS: <strong>23845</strong></li>
+<li>Calculate from Layer: <strong>StudyArea</strong></li>
+<li>Horization and Vertical: <strong>50</strong></li>
+<li>Click <strong>OK</strong></li>
+</ul>
+<p><img src="img/siteSelection23.png" /></p>
+<p>Now we will get a raster layer like below:</p>
+<p><img src="img/siteSelection24.png" /> The reason to use 1 minus the equation:</p>
+<p>Hence, we should use the original formula for factor_river, factor_coastline, factor_forest, factor_fire.</p>
+<p>Repeat the above steps for other layers as well.</p>
+<p>Additionally, after generating the factor_osm layer, we still need to make some adjustments because the requirement is different. It should be near to current urban settlement areas but not at the current major settlement areas. After generating the <strong>factor_osm</strong> layer, we need to change all values from 1(means the current major settlement area) to 0.</p>
+<p>We use another <strong>Raster calculator</strong> tool to achieve that. Moreover, the value of the factor_osm layer will decrease when the distance is further away.</p>
+<ul>
+<li>Open Processing Toolbox, search <strong>Raster calculator</strong>.</li>
+<li>Click the one under <strong>SAGA -&gt; Raster - Calculus</strong></li>
+</ul>
+<p><img src="img/siteSelection25.png" /> The configuration window is as shown below:</p>
+<ul>
+<li>The formula is: <strong>ifelse(a=1, 0, a)</strong></li>
+<li>Grids: <strong>factor_osm</strong></li>
+</ul>
+<p><img src="img/siteSelection26.png" /> A temporary layer will come out. Export to Geopackage and name it as <strong>factor_osm_final</strong>.</p>
+<p><img src="img/siteSelection27.png" /></p>
+<h1 id="performing-ahp-analysis">3.0 Performing AHP Analysis</h1>
+<p>AHP Put excel screenshot (red and yellow)</p>
+<p>With the AHP scores as shown below. Put the green part screenshot</p>
+<p>Then state the ranking and consistency check</p>
+<p>Example: The consistency check of 3% is below 10% and the inconsistency is acceptable.</p>
+<h1 id="computing-the-suitability-layer">4.0 Computing the Suitability Layer</h1>
+<p>Use the factor layers times AHP scores, then add together, times Rasterized_StudyArea. Because we want the final output is within the study area.</p>
+<p><img src="img/siteSelection28.png" /> A temporary layer Output will be shown.</p>
+<p><img src="img/siteSelection29.png" /> Notice that locations (grids) with values closer to 1 are more suitable than locations with values closer to 0. Export to Geopackage and name it <strong>AHP_suitability</strong>.</p>
+<p><img src="img/siteSelection30.png" /></p>
+<h1 id="identifying-suitable-sites">5.0 Identifying Suitable Sites</h1>
+<p>According to the recommendation of a senior planner, the selected site should have at least a composite factor scores of 0.5. We will take his advise to prepare the final suitability site layer.</p>
+<ul>
+<li>We need to reclass the <strong>AHP_suitability</strong> layer.</li>
+<li>Find <strong>Reclassify by table</strong> in toolbox, and double click.</li>
+</ul>
+<p><img src="img/siteSelection31.png" /></p>
+<p><img src="img/siteSelection32.png" /></p>
+<ul>
+<li>Make sure <strong>Raster layer</strong> is <strong>AHP_suitability</strong>.</li>
+<li>For the <strong>Reclassification table</strong>, click on the … icon.</li>
+<li>Follow the screenshot below, and click OK.</li>
+</ul>
+<p><img src="img/siteSelection33.png" /></p>
+<ul>
+<li>Click <strong>Run</strong>.</li>
+<li>A temporary layer <strong>Reclassifie_raster</strong> will be shown. Save the output into GeoPackage format and name the layer as <strong>MCDA_model</strong>.</li>
+</ul>
+<p><img src="img/siteSelection34.png" /></p>
+<h2 id="vectorise-suitable-sites">5.1 Vectorise suitable sites</h2>
+<p>Next, we will convert the suitable site identified above from raster into vector. The process is called vectorisation.</p>
+<ul>
+<li>From the menu bar, select <strong>Raster -&gt; Conversion -&gt; Polygonize(Raster to Vector)</strong> The Polygonize (Raster to Vector) dialog window appears.</li>
+<li>For Input Layer, select AHP_suitability from the drop-down list.</li>
+<li>For Name of the field to create, type Sites.</li>
+<li>Keep the checkbox in front of <strong>Use 8-connectedness</strong> uncheck.</li>
+</ul>
+<p><img src="img/siteSelection35.png" /></p>
+<ul>
+<li>When you are ready, click on the <strong>Run</strong> button.</li>
+<li>When the computation is completed, a new temporary layer called <strong>Vectorized</strong> will be added on the Layers panel and display on the view window.</li>
+<li>Delete away all the non suitable sites (‘Site’ = 0).</li>
+</ul>
+<p><img src="img/siteSelection36.png" /> Save the final layer into GeoPackage format. Call the newly created layer <strong>Potential_sites</strong>.</p>
+<p><img src="img/siteSelection37.png" /></p>
+<h1 id="final-steps-for-site-selections">6.0 Final steps for site selections:</h1>
+<p><img src="img/siteSelection39.png" /> For reference layer, choose one of the layers used in the equation</p>
+<p><img src="img/siteSelection40.png" /></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
