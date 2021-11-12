@@ -2110,15 +2110,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#raster-based-gis-multiplecriteria-decision-analysis-gis-mcda">3.0 Raster-based GIS Multiple‐Criteria Decision Analysis (GIS-MCDA)</a>
 <ul>
 <li><a href="#standardising-the-factor-scores">3.1 Standardising the factor scores</a></li>
-<li><a href="#factor_eco">3.2 Factor_eco</a></li>
+<li><a href="#factor_eco">3.1.1 factor_eco</a></li>
+<li><a href="#performing-ahp-analysis">3.2 Performing AHP Analysis</a></li>
+<li><a href="#computing-the-suitability-layer">3.3 Computing the Suitability Layer</a></li>
 </ul></li>
-<li><a href="#performing-ahp-analysis">4.0 Performing AHP Analysis</a></li>
-<li><a href="#computing-the-suitability-layer">5.0 Computing the Suitability Layer</a></li>
-<li><a href="#identifying-suitable-sites">6.0 Identifying Suitable Sites</a>
+<li><a href="#identifying-suitable-sites">4.0 Identifying Suitable Sites</a>
 <ul>
-<li><a href="#vectorise-suitable-sites">6.1 Vectorise suitable sites</a></li>
+<li><a href="#vectorise-suitable-sites">4.1 Vectorise suitable sites</a></li>
 </ul></li>
-<li><a href="#final-steps-for-site-selections">7.0 Final steps for site selections:</a></li>
 </ul>
 </nav>
 </div>
@@ -2286,7 +2285,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="raster-based-gis-multiplecriteria-decision-analysis-gis-mcda">3.0 Raster-based GIS Multiple‐Criteria Decision Analysis (GIS-MCDA)</h1>
 <h2 id="standardising-the-factor-scores">3.1 Standardising the factor scores</h2>
 <p>Because of the difference scales upon which criteria are measured, it is necessary that factors be standardized before combination using the formulas below: <img src="img/siteSelection18.png" /></p>
-<h2 id="factor_eco">3.2 Factor_eco</h2>
+<h2 id="factor_eco">3.1.1 factor_eco</h2>
 <ul>
 <li>To get the <strong>max(x)</strong> value, open the Attribute table of the <strong>Slope</strong> layer.</li>
 <li>Click on the Information tab, scroll down to find the <strong>Max</strong> Value.</li>
@@ -2327,18 +2326,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 <p><img src="img/siteSelection26.png" /> A temporary layer will come out. Export to Geopackage and name it as <strong>factor_osm_final</strong>.</p>
 <p><img src="img/siteSelection27.png" /></p>
-<h1 id="performing-ahp-analysis">4.0 Performing AHP Analysis</h1>
+<h2 id="performing-ahp-analysis">3.2 Performing AHP Analysis</h2>
 <p>AHP Put excel screenshot (red and yellow)</p>
 <p>With the AHP scores as shown below. Put the green part screenshot</p>
 <p>Then state the ranking and consistency check</p>
 <p>Example: The consistency check of 3% is below 10% and the inconsistency is acceptable.</p>
-<h1 id="computing-the-suitability-layer">5.0 Computing the Suitability Layer</h1>
-<p>Use the factor layers times AHP scores, then add together, times Rasterized_StudyArea. Because we want the final output is within the study area.</p>
+<h2 id="computing-the-suitability-layer">3.3 Computing the Suitability Layer</h2>
+<p>Use the <strong>factor layers</strong> times <strong>AHP scores</strong>, then add together, times <strong>Rasterized_StudyArea</strong>. Because we want the final output is within the study area.</p>
 <p><img src="img/siteSelection28.png" /> A temporary layer Output will be shown.</p>
 <p><img src="img/siteSelection29.png" /> Notice that locations (grids) with values closer to 1 are more suitable than locations with values closer to 0. Export to Geopackage and name it <strong>AHP_suitability</strong>.</p>
 <p><img src="img/siteSelection30.png" /></p>
-<h1 id="identifying-suitable-sites">6.0 Identifying Suitable Sites</h1>
-<p>According to the recommendation of a senior planner, the selected site should have at least a composite factor scores of 0.5. We will take his advise to prepare the final suitability site layer.</p>
+<h1 id="identifying-suitable-sites">4.0 Identifying Suitable Sites</h1>
+<p>According to the recommendation of a senior planner, the selected site should have at least a composite factor scores of <strong>0.5</strong>. We will take his advise to prepare the final suitability site layer.</p>
 <ul>
 <li>We need to reclass the <strong>AHP_suitability</strong> layer.</li>
 <li>Find <strong>Reclassify by table</strong> in toolbox, and double click.</li>
@@ -2348,20 +2347,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <ul>
 <li>Make sure <strong>Raster layer</strong> is <strong>AHP_suitability</strong>.</li>
 <li>For the <strong>Reclassification table</strong>, click on the … icon.</li>
-<li>Follow the screenshot below, and click OK.</li>
+<li>Follow the screenshot below, and click <strong>OK</strong>.</li>
 </ul>
 <p><img src="img/siteSelection33.png" /></p>
 <ul>
 <li>Click <strong>Run</strong>.</li>
 <li>A temporary layer <strong>Reclassifie_raster</strong> will be shown. Save the output into GeoPackage format and name the layer as <strong>MCDA_model</strong>.</li>
 </ul>
-<p><img src="img/siteSelection34.png" /></p>
-<h2 id="vectorise-suitable-sites">6.1 Vectorise suitable sites</h2>
+<p><img src="img/siteSelection34.png" /> <img src="img/siteSelection41.png" /></p>
+<h2 id="vectorise-suitable-sites">4.1 Vectorise suitable sites</h2>
 <p>Next, we will convert the suitable site identified above from raster into vector. The process is called vectorisation.</p>
 <ul>
 <li>From the menu bar, select <strong>Raster -&gt; Conversion -&gt; Polygonize(Raster to Vector)</strong> The Polygonize (Raster to Vector) dialog window appears.</li>
 <li>For Input Layer, select AHP_suitability from the drop-down list.</li>
-<li>For Name of the field to create, type Sites.</li>
+<li>For Name of the field to create, type <em>Sites</em>.</li>
 <li>Keep the checkbox in front of <strong>Use 8-connectedness</strong> uncheck.</li>
 </ul>
 <p><img src="img/siteSelection35.png" /></p>
@@ -2372,9 +2371,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 <p><img src="img/siteSelection36.png" /> Save the final layer into GeoPackage format. Call the newly created layer <strong>Potential_sites</strong>.</p>
 <p><img src="img/siteSelection37.png" /></p>
-<h1 id="final-steps-for-site-selections">7.0 Final steps for site selections:</h1>
-<p><img src="img/siteSelection39.png" /> For reference layer, choose one of the layers used in the equation</p>
-<p><img src="img/siteSelection40.png" /></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

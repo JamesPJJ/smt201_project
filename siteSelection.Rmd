@@ -208,7 +208,7 @@ Repeat the steps above to generate the proximity map layers for other **merged l
 Because of the difference scales upon which criteria are measured, it is necessary that factors be standardized before combination using the formulas below:
 ![](img/siteSelection18.png)
 
-## 3.2 Factor_eco
+## 3.1.1 factor_eco
 
 * To get the **max(x)** value, open the Attribute table of the **Slope** layer.
 * Click on the Information tab, scroll down to find the **Max** Value.
@@ -273,7 +273,7 @@ A temporary layer will come out. Export to Geopackage and name it as **factor_os
 ![](img/siteSelection27.png)
 
 
-# 4.0 Performing AHP Analysis
+## 3.2 Performing AHP Analysis
 
 AHP 
 Put excel screenshot (red and yellow)
@@ -287,9 +287,9 @@ Then state the ranking and consistency check
 Example: The consistency check of 3% is below 10% and the inconsistency is acceptable.
 
 
-# 5.0 Computing the Suitability Layer
+## 3.3 Computing the Suitability Layer
 
-Use the factor layers times AHP scores, then add together, times Rasterized_StudyArea. Because we want the final output is within the study area.
+Use the **factor layers** times **AHP scores**, then add together, times **Rasterized_StudyArea**. Because we want the final output is within the study area.
 
 ![](img/siteSelection28.png)
 A temporary layer Output will be shown.
@@ -301,9 +301,9 @@ Export to Geopackage and name it **AHP_suitability**.
 
 ![](img/siteSelection30.png)
 
-# 6.0  Identifying Suitable Sites
+# 4.0  Identifying Suitable Sites
 
-According to the recommendation of a senior planner, the selected site should have at least a composite factor scores of 0.5. We will take his advise to prepare the final suitability site layer.
+According to the recommendation of a senior planner, the selected site should have at least a composite factor scores of **0.5**. We will take his advise to prepare the final suitability site layer.
 
 * We need to reclass the **AHP_suitability** layer. 
 * Find **Reclassify by table** in toolbox, and double click.
@@ -316,7 +316,7 @@ According to the recommendation of a senior planner, the selected site should ha
 
 * Make sure **Raster layer** is **AHP_suitability**. 
 * For the **Reclassification table**, click on the … icon.
-* Follow the screenshot below, and click OK.
+* Follow the screenshot below, and click **OK**.
 
 
 ![](img/siteSelection33.png)
@@ -326,15 +326,17 @@ According to the recommendation of a senior planner, the selected site should ha
 
 
 ![](img/siteSelection34.png)
+![](img/siteSelection41.png)
 
-## 6.1 Vectorise suitable sites
+
+## 4.1 Vectorise suitable sites
 
 Next, we will convert the suitable site identified above from raster into vector. The process is called vectorisation.
 
 * From the menu bar, select **Raster -> Conversion -> Polygonize(Raster to Vector)**
 The Polygonize (Raster to Vector) dialog window appears.
 * For Input Layer, select AHP_suitability from the drop-down list.
-* For Name of the field to create, type Sites.
+* For Name of the field to create, type *Sites*.
 * Keep the checkbox in front of **Use 8-connectedness** uncheck.
 
 
@@ -351,10 +353,4 @@ Save the final layer into GeoPackage format. Call the newly created layer **Pote
 
 
 
-# 7.0  Final steps for site selections:
-
-![](img/siteSelection39.png)
-For reference layer, choose one of the layers used in the equation
-
-![](img/siteSelection40.png)
 
