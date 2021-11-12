@@ -29,7 +29,7 @@ It should avoid areas prone to forest fire.|merged_fire
 It should be highly accessible via road transport|merged_street
 It should be near to airport(s) and seaport(s).|merged_transport
 
-## 1.2 Volcano
+## 1.2 Volcano analysis
 
 According to our research on volcano distribution in Indonesia, we found out that there are 147 volcanoes in Indonesia as of 2021. Most of the volcanoes are distributed in Java and Sumatra area (Volcanoes of Indonesia 2021)
 
