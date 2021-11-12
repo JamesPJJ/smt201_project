@@ -185,7 +185,7 @@ Your screen should look similar to the screenshot below
 
 ![](img/siteSelection4.png)
 
-## 2.4 Data extration for Street layer
+## 2.5 Data extration for Street layer
 Right click on the **gis_osm_road_free_1** layer, and click **Open Attribute table**
 
 
