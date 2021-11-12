@@ -84,7 +84,7 @@ This graph shows the distribution of airports and seaports (harbour and docks) i
 
 ### 3.2 Streets
 ![](img/street.png)
-The graphs shows a distribution of road networks in the study area. While there seems to be a closely connected study area there seems to be pockets of area in Kutai Kartanegara with less accessibility as the road networks are not as dense. In addition, towards the Southeast region of Penjaman Paser Utara and Northeast region of Kota Balikpapan, it can be seen that large areas of land are not covered by the road network and would make these land quite inaccessible. 
+The graph shows a distribution of major road network in the study area. It can be seen that the network of roads is relatively dense in the cities of East Kalimantan, in Samarinda and Balikpapan. The network is quite sparse in Kutai Kartanegara and Penjaman Paser Utara, indicating lesser accessibility in these areas.
 
 
 ### 3.3 Cell/Telephone
@@ -164,7 +164,7 @@ Click **OK**. The studyArea layer will be colored by four districts.
 
 ## Power house 
 Merge layers
-On the menu bar, Click **Vector** -> **Data Management Tool**s -> **Merge Vector Layers**.
+On the menu bar, Click **Vector** -> **Data Management Tool**s -> **Merge Vector Layers**
 
 ![](img/coloredStudyArea4.png)
 For Input layers, click ... to choose layers.
