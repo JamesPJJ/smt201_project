@@ -276,15 +276,12 @@ A temporary layer will come out. Export to Geopackage and name it as **factor_os
 ## 3.2 Performing AHP Analysis
 
 AHP 
-Put excel screenshot (red and yellow)
+![](img/siteSelection49.png)
 
 With the AHP scores as shown below.
-Put the green part screenshot
+![](img/siteSelection50.png)
 
-
-Then state the ranking and consistency check
-
-Example: The consistency check of 3% is below 10% and the inconsistency is acceptable.
+The consistency check of 1% is below 10% and the inconsistency is acceptable.
 
 
 ## 3.3 Computing the Suitability Layer
