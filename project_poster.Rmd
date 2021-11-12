@@ -1,48 +1,28 @@
 ---
-main_topsize: 0.2 #percent coverage of the poster
+main_topsize: 0.15 #percent coverage of the poster
+title: False
+
 main_bottomsize: 0.1
+primary_colour: "#116781"
+secondary_colour: "#D0EFFF"
+accent_colour: "#D0EFFF"
 #ESSENTIALS
-title: '**A Better Reproducible Poster Title**'
-author:
-  - name: '**W. Brent Thorne**'
-    affil: 1
-    main: true
-    orcid: '0000-0002-1099-3857'
-    twitter: brentthorne18 
-    email: bthorne2@brocku.ca
-  - name: Another G. Contributor
-    affil: 2
-    main: true
-    email: 'ag.con@posterdown.net'
-  - name: Person Three
-    affil: 3
-  - name: Person Four
-    affil: 2
-  - name: Person Five
-    affil: 3
-  - name: Person Six
-    affil: 3
-  - name: A. Seventh Author
-    affil: 2
-affiliation:
-  - num: 1
-    address: Department of Earth Science, Brock University
-  - num: 2
-    address: Department of Graphics and Layouts, University of Posters; Canada
-  - num: 3
-    address: Another Institute of a place where work gets done, Earth, Milky Way
+
+
+
 main_findings:
-  - "Make **better posters** with RMarkdown + **posterdown**."
-logoleft_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
-logoright_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
-logocenter_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/qr-code-black.png
+  - "Where should the new province-level planned city be located in East Kalimantan?"
+logoleft_name: https&#58;//i.ibb.co/3BLW8CM/logo.png
+logoright_name: https&#58;//i.ibb.co/3BLW8CM/logo.png
+logocenter_name: https&#58;//i.ibb.co/3BLW8CM/logo.png
 output: 
   posterdown::posterdown_betterport:
     self_contained: false
     pandoc_args: --mathjax
-    number_sections: false
+    number_sections: 3
 bibliography: packages.bib
 link-citations: true
+
 ---
 
 ```{r, include=FALSE}
@@ -55,70 +35,87 @@ knitr::opts_chunk$set(echo = FALSE,
 options(knitr.table.format = "html") 
 ```
 
+
+```{css, echo=FALSE}
+div{
+color: #D0EFFF;
+}
+
+.section{
+  background-color: #D0EFFF;
+}
+
+h1{
+  bg-color: #2A9DF4;
+  color:#000000;
+}
+
+
+
+
+
+```
+
+# Team J Cube
+
+<center>
+![](https://i.ibb.co/3TnKsb4/logo-removebg-preview-1.png)
+
+James Pang Jun Jie
+
+Jiali Huo
+
+Jiawei Yao
+</center>
 # Introduction
 
-This is the `posterdown_betterport` template for the {posterdown} package! I was inspired by the twitter thread of [Mike Morrison](https://mobile.twitter.com/mikemorrison/status/1110191245035479041) and wanted to apply the `#betterposter` concept to the reproducible (yet simple to use) functionality of the {posterdown} package [@R-posterdown]. If you're not an R user don't sweat as you do **NOT** need to use it at all! Feel free to use only the Markdown functionality of this package :)
+In 2019, President Joko Widodo announced a plan to relocate the capital to Kalimantan, to a more central location within Indonesia. Part of Kutai Kartanegara Regency and Penajam North Paser Regency in East Kalimantan will be carved out to create a new province-level planned city.
 
 ```{r, include=FALSE}
 knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 ```
 
-## Objectives
+# REPORT OF SURVEY
 
-1. Pick a template layout.
-2. Write/ create your poster content distraction free.
-3. Let posterdown do its thing!
+## Population and Demographic
+<center>
+![](img/poster1.png)
+</center>
+From the number of people aged 20 to 55 distribution map, we can see that the young and mid-aged people are mainly located in Kota Samarinda and Kota Balikpapan. This group is representative in terms of industry advancement and higher proportion means the area is more labor intensive. 
 
-# Methods
+## Economic and Businesses
+<center>
+![](img/poster2.png)
+</center>
+This graph shows the distribution of mines in the study area. It is seen that mines are concentrated in and around Samarinda, where mining activities were once popular in. Penjamin Paser Utara and Balikpapan do not have these. Land used for mining could be a consideration as it would involve additional economic cost.
 
-I will show here how to include poster elements that may be useful, such as an equation using mathjax:
+## Transport and Communication
+<center>
+![](img/poster4.png)
+</center>
+The graph shows a distribution of major road networks in the study area. It can be seen that the network of roads is relatively dense in Samarinda and Balikpapan. The network is quite sparse in Kutai Kartanegara and Penjaman Paser Utara, indicating lesser accessibility in these areas.
 
-$$
-E = mc^2
-$$
+<center>
+![](img/poster3.png)
+</center>
 
-To reference a citation you can add your `.bib` file to the working directory and name it in the YAML metadata or generate an automated one as done here, then you only need to reference the label value in the `.bib` file. For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd `[@R-pagedown]` [@R-pagedown].
+This graph shows the distribution of airports and seaports (harbour and docks). There are two airports, one in Balikpapan and the other in Samarinda. These two areas would be more accessible due to the larger number of islands in Indonesia. For seaports, there are two clusters, one near Balikpapan and Penjaman Paser Utara and the other cut across Samarinda. Seaports are useful for shorter distance travel as well as cargo shipment.
 
-To get a better understanding of how to include features like these please refer to the {posterdown} [wiki](https://github.com/posterdown/wiki).
+## Infrastructure
+<center>
+![](img/poster5.png)
+</center>
+Surprisingly, the number of hospitals in East Kalimantan is not many.  However, there are a lot of Health Services & Centers and they are evenly distributed in East Kalimantan. Kota Samarinda and Kota Balikpapan are more populous and more developed. In contrast, the medical conditions will also be better.
 
-**_Now on to the results!_**
+## Environment and Hazard
+<center>
+![](img/poster6.png)
+</center>
+East Kalimantan has an area of 21,144 km2 which occupies about 11% of the whole country. From the map above, we can see the distribution of Non-Agri Wet Forest, Dry Forest and Shrub. The area of forest and shrubs can cover almost the entire East Kalimantan.
 
-# Results
+<center>
+![](img/poster7.png)
+</center>
+From the map above, we can see the blue line is the coastline for East Kalimantan. East Kalimantan has a tropical climate with two seasons, the dry season and the rainy season. Moreover, because it is close to the sea, the temperature depends on the area of the ocean surface and the distance from the beach.
 
-Here you may have some figures to show off, bellow I have made a scatterplot with the infamous Iris dataset and I can even reference to the figure automatically like this, `Figure \@ref(fig:irisfigure)`, Figure \@ref(fig:irisfigure).
-
-```{r, irisfigure, fig.cap='Here is a caption for the figure. This can be added by using the "fig.cap" option in the r code chunk options, see this [link](https://yihui.name/knitr/options/#plots) from the legend himself, [Yihui Xie](https://twitter.com/xieyihui).', out.width="80%"}
-par(mar=c(2,2,0,1))
-plot(x = iris$Sepal.Length, y = iris$Sepal.Width,
-     col = iris$Species, pch = 19, xlab = "Sepal Length",
-     ylab = "Sepal Width")
-```
-
-Maybe you want to show off some of that fancy code you spent so much time on to make that figure, well you can do that too! Just use the `echo=TRUE` option in the r code chunk options, Figure \@ref(fig:myprettycode)!
-
-```{r myprettycode, echo=TRUE, fig.cap='Boxplots, so hot right now!', fig.height=6, out.width="80%"}
-#trim whitespace
-par(mar=c(2,2,0,0))
-#plot boxplots
-boxplot(iris$Sepal.Width~iris$Species,
-        col = "#008080", 
-        border = "#0b4545",
-        ylab = "Sepal Width (cm)",
-        xlab = "Species")
-```
-
-How about a neat table of data? See, Table \@ref(tab:iristable):
-
-```{r, iristable}
-knitr::kable(
-  iris[1:15,1:5], format = "html",
-  caption = "A table made with the **knitr::kable** function.",
-  align = "c", col.names = c("Sepal <br> Length",
-                             "Sepal <br> Width",
-                             "Petal <br> Length",
-                             "Petal <br> Width",
-                             "Species"),
-  escape = FALSE)
-```
-
-# References
+# Introduction
