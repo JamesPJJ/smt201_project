@@ -742,7 +742,7 @@ padding: 0px;
 }
 .outer {
 width: 36in;
-height: calc(48in *  (1 - 0.15 - 0.1 - 0.01) );
+height: calc(48in *  (1 - 0.18 - 0 - 0.01) );
 -webkit-column-count: 3; /* Chrome, Safari, Opera */
 -moz-column-count: 3; /* Firefox */
 column-count: 3;
@@ -763,7 +763,7 @@ column-rule-style: none;
 column-rule-color: black;
 background-color: #ffffff;
 font-family: Rasa;
-margin-top: calc(48in *  0.15 );
+margin-top: calc(48in *  0.18 );
 padding-top: 1em;
 padding-bottom: 1em;
 }
@@ -856,7 +856,7 @@ text-align: left;
 }
 .main {
 width: 36in;
-height: calc(48in * 0.15);
+height: calc(48in * 0.18);
 position: absolute;
 background-color: #116781;
 color: #ffffff90;
@@ -927,8 +927,8 @@ padding: 0cm;
 }
 .main_bottom {
 width: 36in;
-height: calc(48in * 0.1);
-margin-top: calc(48in * (1 - 0.1));
+height: calc(48in * 0);
+margin-top: calc(48in * (1 - 0));
 position: absolute;
 background-color: #116781;
 background-image: linear-gradient(#D0EFFF 10%, #116781);
@@ -986,6 +986,7 @@ span > #tab:mytable {
 <a href="dataprep.html">Data Preparation</a>
 <a href="survey.html">Report of Survey</a>
 <a href="siteSelection.html">Site Selection Report</a>
+<a href="project_poster.html">Poster</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
@@ -1032,12 +1033,13 @@ h1{
 <p><img src="https://i.ibb.co/3TnKsb4/logo-removebg-preview-1.png" /></p>
 <p>James Pang Jun Jie</p>
 <p>Jiali Huo</p>
-Jiawei Yao
+<p>Jiawei Yao</p>
 </center>
 </div>
 <div id="introduction" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Introduction</h1>
 <p>In 2019, President Joko Widodo announced a plan to relocate the capital to Kalimantan, to a more central location within Indonesia. Part of Kutai Kartanegara Regency and Penajam North Paser Regency in East Kalimantan will be carved out to create a new province-level planned city.</p>
+<p><br></p>
 </div>
 <div id="report-of-survey" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> REPORT OF SURVEY</h1>
@@ -1085,8 +1087,80 @@ Jiawei Yao
 <p>From the map above, we can see the blue line is the coastline for East Kalimantan. East Kalimantan has a tropical climate with two seasons, the dry season and the rainy season. Moreover, because it is close to the sea, the temperature depends on the area of the ocean surface and the distance from the beach.</p>
 </div>
 </div>
-<div id="introduction-1" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Introduction</h1>
+<div id="site-selection" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> SITE SELECTION</h1>
+<div id="steps-taken" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Steps taken</h2>
+<ol style="list-style-type: decimal">
+<li>Generate proximity maps for each factor by converting vector layer to raster layer</li>
+<li>Standardize the factor scores of data by using the Z-Score formula.</li>
+</ol>
+<p><span class="math display">\[\begin{equation}
+E = \frac{x - min(x)}{{ max(x) - min(x)}}
+
+\end{equation}\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Implement AHP Analysis to determine the importance of each factor.</li>
+</ol>
+<center>
+<img src="img/AHP.png" />
+</center>
+<p>the AHP scores as shown below.</p>
+<center>
+<img src="img/siteSelection50.png" />
+</center>
+<table>
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Economy</td>
+<td>0.138</td>
+</tr>
+<tr class="even">
+<td>Accessibility</td>
+<td>0.138</td>
+</tr>
+<tr class="odd">
+<td>Forest Fire</td>
+<td>0.078</td>
+</tr>
+<tr class="even">
+<td>Transporation for Sea and Air</td>
+<td>0.080</td>
+</tr>
+<tr class="odd">
+<td>CoastLine</td>
+<td>0.231</td>
+</tr>
+<tr class="even">
+<td>River</td>
+<td>0.240</td>
+</tr>
+<tr class="odd">
+<td>Settlement</td>
+<td>0.048</td>
+</tr>
+<tr class="even">
+<td>Forest</td>
+<td>0.048</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" style="list-style-type: decimal">
+<li>Combine different factor data into one raster layer by utilizing the weightages from AHP Analysis. Use the Raster Calculator to combine them together.</li>
+<li>We identified <strong>0.5</strong> as the minimum for composite factor scores which are considered “Suitable.”</li>
+<li>Within the suitable area, we use area comparison and report of survey to find the final location we recommend.</li>
+</ol>
+<p>These two sites are left for final consideration. They are <strong>Suka Maju</strong> and <strong>Tanjung Harapan</strong>.</p>
+<p>Connected to the Report of Survey, we narrowed down to <strong>Suka Maju</strong>. <strong>Suka Maju</strong> has much suitable manpower, fitting education, healthcare, key industry and cell tower facilities as compared to <strong>Tanjung Harapan</strong>.</p>
+<center>
+<p><img src="img/poster9.png" /></p>
+</div>
 </div>
 
 </div>
@@ -1094,12 +1168,25 @@ Jiawei Yao
 <p>Where should the new province-level planned city be located in East Kalimantan?</p>
 </div>
 <div class="main_bottom">
-<img id="main-img-left" src=https://i.ibb.co/3BLW8CM/logo.png>
-<img id="main-img-center" src=https://i.ibb.co/3BLW8CM/logo.png>
-<img id="main-img-right" src=https://i.ibb.co/3BLW8CM/logo.png>
+<img id="main-img-left" src=>
+<img id="main-img-center" src=>
+<img id="main-img-right" src=>
 </div>
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+var script = document.createElement("script");
+script.type = "text/javascript";
+var src = "true";
+if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+if (location.protocol !== "file:" && /^https?:/.test(src))
+src = src.replace(/^https?:/, '');
+script.src = src;
+document.getElementsByTagName("head")[0].appendChild(script);
+})();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

@@ -1,8 +1,8 @@
 ---
-main_topsize: 0.15 #percent coverage of the poster
+main_topsize: 0.18 #percent coverage of the poster
 title: False
 
-main_bottomsize: 0.1
+main_bottomsize: 0
 primary_colour: "#116781"
 secondary_colour: "#D0EFFF"
 accent_colour: "#D0EFFF"
@@ -12,9 +12,7 @@ accent_colour: "#D0EFFF"
 
 main_findings:
   - "Where should the new province-level planned city be located in East Kalimantan?"
-logoleft_name: https&#58;//i.ibb.co/3BLW8CM/logo.png
-logoright_name: https&#58;//i.ibb.co/3BLW8CM/logo.png
-logocenter_name: https&#58;//i.ibb.co/3BLW8CM/logo.png
+
 output: 
   posterdown::posterdown_betterport:
     self_contained: false
@@ -66,14 +64,13 @@ James Pang Jun Jie
 Jiali Huo
 
 Jiawei Yao
+
 </center>
 # Introduction
 
 In 2019, President Joko Widodo announced a plan to relocate the capital to Kalimantan, to a more central location within Indonesia. Part of Kutai Kartanegara Regency and Penajam North Paser Regency in East Kalimantan will be carved out to create a new province-level planned city.
 
-```{r, include=FALSE}
-knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
-```
+<br>
 
 # REPORT OF SURVEY
 
@@ -118,4 +115,48 @@ East Kalimantan has an area of 21,144 km2 which occupies about 11% of the whole 
 </center>
 From the map above, we can see the blue line is the coastline for East Kalimantan. East Kalimantan has a tropical climate with two seasons, the dry season and the rainy season. Moreover, because it is close to the sea, the temperature depends on the area of the ocean surface and the distance from the beach.
 
-# Introduction
+# SITE SELECTION
+
+## Steps taken
+1. Generate proximity maps for each factor by converting vector layer to raster layer
+2. Standardize the factor scores of data by using the Z-Score formula.
+
+\begin{equation}
+E = \frac{x - min(x)}{{ max(x) - min(x)}}
+
+\end{equation}
+
+3. Implement AHP Analysis to determine the importance of each factor.
+
+<center>
+![](img/AHP.png)
+</center>
+the AHP scores as shown below.
+
+<center>
+![](img/siteSelection50.png)
+</center>
+
+Factor | Value
+------------- | -------------
+Economy | 0.138
+Accessibility | 0.138
+Forest Fire | 0.078
+Transporation for Sea and Air | 0.080
+CoastLine | 0.231
+River | 0.240
+Settlement | 0.048
+Forest | 0.048
+
+4. Combine different factor data into one raster layer by utilizing the weightages from AHP Analysis. Use the Raster Calculator to combine them together.
+5. We identified **0.5** as the minimum for composite factor scores which are considered “Suitable”.
+6. Within the suitable area, we use area comparison and report of survey to find the final location we recommend.
+
+These two sites are left for final consideration. They are **Suka Maju** and **Tanjung Harapan**.
+
+Connected to the Report of Survey, we narrowed down to **Suka Maju**. **Suka Maju** has much suitable manpower, fitting education, healthcare, key industry and cell tower facilities as compared to **Tanjung Harapan**.
+
+
+<center>
+![](img/poster9.png)
+
