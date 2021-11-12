@@ -150,3 +150,55 @@ It will take a while to process the clipping, after that you will be able to see
 ![](img/clippedLayers.png)
 Now the output layers all fit into our studyArea.
 Repeat the above steps for other layers for different sub-districts.
+
+
+## 2.4 Data extration for DEM layer
+Import raster GIS data layer
+From Browser panel, drag and drop **small_digital elevation model Kalimantan East (DEM SRTM 30M KALIMANTAN TIMUR)** into Layers panel
+
+![](img/siteSelection1.png)
+
+Your screen should look similar to the figure below.
+
+![](img/siteSelection2.png)
+Clip the raster layer using clip operation
+From the menu bar, select **Raster** -> **Extraction** -> **Clip Raster by Extent**.
+The Clip Raster by Extent dialog window appears.
+
+* For **Input layer**, select  small_digital elevation model Kalimantan East (DEM SRTM 30M KALIMANTAN TIMUR) from the drop-down list.
+* For **Clipping extent**, click on the icon at the end of the option then select **Calculate from Layer**.
+* Select studyArea from the drop-down list.
+
+Your screen should look similar to the screenshot below
+![](img/siteSelection3.png)
+
+* Click **Run** when you are ready
+* When the process is completed, read the process log to ensure that there is no error
+* Click on **Close** button to close the dialog window and now we have a **DEM** layer which fits our **studyArea**
+* Saving the newly clipped raster layer into GeoPackage format, and name the layer **DEM**.
+* CRS: **23845**
+* Calculate from Area -> **StudyArea**
+* Horizontal: **30**
+* Vertical:**30**
+* Click **OK**.
+
+
+![](img/siteSelection4.png)
+
+## 2.4 Data extration for Street layer
+Right click on the **gis_osm_road_free_1** layer, and click **Open Attribute table**
+
+
+![](img/siteSelection5.png)
+
+Click **Select features by expression**, and input the expression shown as below:
+
+![](img/siteSelection6.png)
+
+Click **Select features** when you are ready, and you will get the selected roads highlighted in yellow:
+
+![](img/siteSelection7.png)
+
+Export the selected street by right click on the layer -> **Export** -> **Save Selected Features As…** 
+Name the layer as **Merged_Street**.
+

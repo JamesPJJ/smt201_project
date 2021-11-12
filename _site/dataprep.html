@@ -2064,7 +2064,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="index.html" class="title">SMT201 GIS Project Website</a>
 <a href="overview.html">Proposal</a>
 <a href="dataprep.html">Data Preparation</a>
-<a href="survey.html">Report of Survey</a>
+<a href="survey234.html">Report of Survey</a>
 <a href="site.html">Site Selection Report</a>
 </div>
 <div class="nav-right">
@@ -2097,6 +2097,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#data-extraction-for-study-area">2.1 Data extraction for study area</a></li>
 <li><a href="#data-selection-for-topographical-data-layers">2.2 Data selection for topographical data layers</a></li>
 <li><a href="#data-extration-for-topographical-data-layers">2.3 Data extration for topographical data layers</a></li>
+<li><a href="#data-extration-for-dem-layer">2.4 Data extration for DEM layer</a></li>
+<li><a href="#data-extration-for-street-layer">2.4 Data extration for Street layer</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2250,6 +2252,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><img src="img/icon.png" /> And in the pop-up window, choose Selection: <strong>studyArea</strong> Select an output folder to store all the output layers</p>
 <p><img src="img/clipMultipleLayers.png" /> Click <strong>OK</strong> when is done. It will take a while to process the clipping, after that you will be able to see the output layers</p>
 <p><img src="img/clippedLayers.png" /> Now the output layers all fit into our studyArea. Repeat the above steps for other layers for different sub-districts.</p>
+<h2 id="data-extration-for-dem-layer">2.4 Data extration for DEM layer</h2>
+<p>Import raster GIS data layer From Browser panel, drag and drop <strong>small_digital elevation model Kalimantan East (DEM SRTM 30M KALIMANTAN TIMUR)</strong> into Layers panel</p>
+<p><img src="img/siteSelection1.png" /></p>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/siteSelection2.png" /> Clip the raster layer using clip operation From the menu bar, select <strong>Raster</strong> -&gt; <strong>Extraction</strong> -&gt; <strong>Clip Raster by Extent</strong>. The Clip Raster by Extent dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select small_digital elevation model Kalimantan East (DEM SRTM 30M KALIMANTAN TIMUR) from the drop-down list.</li>
+<li>For <strong>Clipping extent</strong>, click on the icon at the end of the option then select <strong>Calculate from Layer</strong>.</li>
+<li>Select studyArea from the drop-down list.</li>
+</ul>
+<p>Your screen should look similar to the screenshot below <img src="img/siteSelection3.png" /></p>
+<ul>
+<li>Click <strong>Run</strong> when you are ready</li>
+<li>When the process is completed, read the process log to ensure that there is no error</li>
+<li>Click on <strong>Close</strong> button to close the dialog window and now we have a <strong>DEM</strong> layer which fits our <strong>studyArea</strong></li>
+<li>Saving the newly clipped raster layer into GeoPackage format, and name the layer <strong>DEM</strong>.</li>
+<li>CRS: <strong>23845</strong></li>
+<li>Calculate from Area -&gt; <strong>StudyArea</strong></li>
+<li>Horizontal: <strong>30</strong></li>
+<li>Vertical:<strong>30</strong></li>
+<li>Click <strong>OK</strong>.</li>
+</ul>
+<p><img src="img/siteSelection4.png" /></p>
+<h2 id="data-extration-for-street-layer">2.4 Data extration for Street layer</h2>
+<p>Right click on the <strong>gis_osm_road_free_1</strong> layer, and click <strong>Open Attribute table</strong></p>
+<p><img src="img/siteSelection5.png" /></p>
+<p>Click <strong>Select features by expression</strong>, and input the expression shown as below:</p>
+<p><img src="img/siteSelection6.png" /></p>
+<p>Click <strong>Select features</strong> when you are ready, and you will get the selected roads highlighted in yellow:</p>
+<p><img src="img/siteSelection7.png" /></p>
+<p>Export the selected street by right click on the layer -&gt; <strong>Export</strong> -&gt; <strong>Save Selected Features As…</strong> Name the layer as <strong>Merged_Street</strong>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

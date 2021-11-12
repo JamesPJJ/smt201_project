@@ -1,5 +1,5 @@
 ---
-title: "Report of Survey"
+title: "Site Selection"
 
 output:
   distill::distill_article:
@@ -11,9 +11,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Introduction
-
-The GIS report of survey includes the following themes:
+# Data preparation
 
 * Population and Demographic
 * Economic and Businesses
