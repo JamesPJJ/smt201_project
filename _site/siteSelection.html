@@ -2120,6 +2120,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <ul>
 <li><a href="#vectorise-suitable-sites">4.1 Vectorise suitable sites</a></li>
 </ul></li>
+<li><a href="#final-site-selection">5.0 Final Site Selection</a>
+<ul>
+<li><a href="#intersection-extract">5.1 Intersection Extract</a></li>
+<li><a href="#extraction-by-size-of-area">5.2 Extraction by size of area</a></li>
+<li><a href="#analysis---narrowing-selected-sites">5.3 Analysis - Narrowing Selected Sites</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -2373,6 +2379,45 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 <p><img src="img/siteSelection36.png" /> Save the final layer into GeoPackage format. Call the newly created layer <strong>Potential_sites</strong>.</p>
 <p><img src="img/siteSelection37.png" /></p>
+<h1 id="final-site-selection">5.0 Final Site Selection</h1>
+<h2 id="intersection-extract">5.1 Intersection Extract</h2>
+<ul>
+<li>Click on <strong>Select By Location</strong>. Follow the screenshot below.</li>
+</ul>
+<p><img src="img/siteSelection39.png" /></p>
+<ul>
+<li>Click <strong>Run</strong>.</li>
+</ul>
+<p>All the parts that intersect with the <strong>studyArea</strong> layer will be selected.</p>
+<p><img src="img/siteSelection40.png" /> <em>Right click on the <strong>studyArea</strong> layer -&gt; <strong>Export -&gt; Save Selected Features as…</strong> </em>Name the layer as <strong>potential_onStudyArea.</strong></p>
+<p><img src="img/siteSelection42.png" /></p>
+<h2 id="extraction-by-size-of-area">5.2 Extraction by size of area</h2>
+<p>The area requirement of the site stated is between 4500 to 5500 hectares, which is 45,000,000 to 55,000,000 square metres.</p>
+<p>Open the <strong>Attribute Table</strong> and key in the expression as stated below</p>
+<p><em>“area” &lt;= 55000000 and “area” &gt;= 45000000</em></p>
+<p><img src="img/siteSelection43.png" /></p>
+<p>There will be 5 sites which will be selected, similar to the image shown below. Export the selected sites to the geopackage. Name it as <strong>potential_5.</strong></p>
+<p><img src="img/siteSelection44.png" /></p>
+<p>From <strong>potential_5</strong> layer, select the top left site and export it to the geopackage. Name it as <strong>Site_selection</strong>.</p>
+<h2 id="analysis---narrowing-selected-sites">5.3 Analysis - Narrowing Selected Sites</h2>
+<p><img src="img/siteSelection45.png" /></p>
+<p><img src="img/siteSelection46.png" /> The two maps shown above are sites which were selected but only have a few points from the <strong>Potential_sites</strong> touching the study area’s desa. Thus, these two sites will not be considered.</p>
+<p><img src="img/siteSelection47.png" /></p>
+<p>For the third site shown from the map above, it can be seen that many small plots of land are scattered around the desa. They are not part of the final <strong>Potential_site</strong>, and hence the site is not suitable as the site for the capital city.</p>
+<p><img src="img/siteSelection48.png" /></p>
+<p>These are the two sites left to consider. Our team will utilise some analysis done in the <strong>Report of Survey</strong> for the final site selection. The site nearer to the north is Suka Maju while the other site is Tanjung Harapan.</p>
+<p><img src="img/aged20-25.png" /></p>
+<p>The distribution of people ages 20 to 55 shows a stark difference in both sites. Suka Maju has a higher proportion compared to Tanjung Harapan. This is important because the relocation of the capital city would mean that there would highly likely to bring in more jobs to the local area. Those aged 20 to 55 would be the ideal group range for employment, thus the site with the higher proportion, Suka Maju, is preferred.</p>
+<p><img src="img/school.png" /></p>
+<p>With regards to the distribution of schools, we can see that there is a higher proportion of schools in Suka Maju than Tanjung Harapan. If relocation is done, the schools would be an important factor for families relocating to the new capital city. To provide convenience to families of government officials relocating, Suka Maju will be a better option.</p>
+<p><img src="img/keyIndustry.png" /></p>
+<p>For key industry facilities, we can see that there is a facility which is situated in Tanjung Harapan. To minimise the disruption caused to key industry in East Kalimantan, Suka Maju will be the preferred site.</p>
+<p><img src="img/cellTelephone.png" /></p>
+<p>Regarding cell towers, there are more cell towers in and around Suka Maju compared to Tanjung Harapan. Development of such infrastrures would be minimised if the capital city is relocated to Suka Maju and Tanjung Harapan would keep costs lower. It would provide better cell coverage if these infrastructures are not built in either areas when relocated. Hence, Suka Maju will be the better site.</p>
+<p><img src="img/healthCare.png" /></p>
+<p>For health-related facilities, it can be seen from the map that there is a health service and center facility in Suka Maju and none in Tanjung Harapan. If the relocation of the capital city is to be in either site, Suka Maju will be more suitable. With an existing healthcare facility, it would translate to more capable resources with regards to healthcare. There would potentially be more trained healthcare professionals available if another healthcare facility is to be built for the capital city. Even if there is no additional development, an existing facility would be better than no such facility.</p>
+<p>Thus, after considering the various factors mentioned above, our team feels that Suka Maju is the preferred site for the relocation.</p>
+<p><img src="img/final_site.png" /></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

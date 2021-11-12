@@ -352,5 +352,81 @@ Save the final layer into GeoPackage format. Call the newly created layer **Pote
 ![](img/siteSelection37.png)
 
 
+# 5.0  Final Site Selection
 
+
+## 5.1 Intersection Extract
+
+* Click on **Select By Location**. Follow the screenshot below. 
+
+![](img/siteSelection39.png)
+
+* Click **Run**.
+
+All the parts that intersect with the **studyArea** layer will be selected.
+
+![](img/siteSelection40.png)
+*Right click on the **studyArea** layer -> **Export -> Save Selected Features as…**
+*Name the layer as **potential_onStudyArea.**
+
+![](img/siteSelection42.png)
+
+## 5.2 Extraction by size of area
+
+The area requirement of the site stated is between 4500 to 5500 hectares, which is 45,000,000 to 55,000,000 square metres. 
+
+Open the **Attribute Table** and key in the expression as stated below
+
+*“area” <= 55000000 and “area” >= 45000000*
+
+![](img/siteSelection43.png)
+
+There will be 5 sites which will be selected, similar to the image shown below. Export the selected sites to the geopackage. Name it as **potential_5.**
+
+![](img/siteSelection44.png)
+
+
+From **potential_5** layer, select the top left site and export it to the geopackage. Name it as **Site_selection**.
+
+
+
+## 5.3 Analysis - Narrowing Selected Sites 
+
+![](img/siteSelection45.png)
+
+![](img/siteSelection46.png)
+The two maps shown above are sites which were selected but only have a few points from the **Potential_sites** touching the study area’s desa. Thus, these two sites will not be considered.
+
+![](img/siteSelection47.png)
+
+For the third site shown from the map above, it can be seen that many small plots of land are scattered around the desa. They are not part of the final **Potential_site**, and hence the site is not suitable as the site for the capital city.
+
+![](img/siteSelection48.png)
+
+These are the two sites left to consider. Our team will utilise some analysis done in the **Report of Survey** for the final site selection. The site nearer to the north is Suka Maju while the other site is Tanjung Harapan.
+
+![](img/aged20-25.png)
+
+The distribution of people ages 20 to 55 shows a stark difference in both sites. Suka Maju has a higher proportion compared to Tanjung Harapan. This is important because the relocation of the capital city would mean that there would highly likely to bring in more jobs to the local area. Those aged 20 to 55 would be the ideal group range for employment, thus the site with the higher proportion, Suka Maju, is preferred.
+
+![](img/school.png)
+
+With regards to the distribution of schools, we can see that there is a higher proportion of schools in Suka Maju than Tanjung Harapan. If relocation is done, the schools would be an important factor for families relocating to the new capital city. To provide convenience to families of government officials relocating, Suka Maju will be a better option.
+
+![](img/keyIndustry.png)
+
+For key industry facilities, we can see that there is a facility which is situated in Tanjung Harapan. To minimise the disruption caused to key industry in East Kalimantan, Suka Maju will be the preferred site.
+
+![](img/cellTelephone.png)
+
+Regarding cell towers, there are more cell towers in and around Suka Maju compared to Tanjung Harapan. Development of such infrastrures would be minimised if the capital city is relocated to Suka Maju and Tanjung Harapan would keep costs lower. It would provide better cell coverage if these infrastructures are not built in either areas when relocated. Hence, Suka Maju will be the better site.
+
+![](img/healthCare.png)
+
+
+For health-related facilities, it can be seen from the map that there is a health service and center facility in Suka Maju and none in Tanjung Harapan. If the relocation of the capital city is to be in either site, Suka Maju will be more suitable. With an existing healthcare facility, it would translate to more capable resources with regards to healthcare. There would potentially be more trained healthcare professionals available if another healthcare facility is to be built for the capital city. Even if there is no additional development, an existing facility would be better than no such facility.
+
+Thus, after considering the various factors mentioned above, our team feels that Suka Maju is the preferred site for the relocation.
+
+![](img/final_site.png)
 

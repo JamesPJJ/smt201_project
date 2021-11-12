@@ -28,7 +28,7 @@ Indonesia Geospatial|	Shape files |	Titik Api Hotspot se-Indonesia Tahun 2014 - 
 Indonesia Geospatial|	Shape files |	Geology Kalimantan Timur |	https://www.indonesia-geospasial.com/2020/03/download-data-shapefile-shp-geologi-se.html
 Indonesia Geospatial|	Shape files |	East BATAS DESA DESEMBER 2019 DUKCAPIL KALIMANTAN TIMUR (Villiage boundary and population data for East Kalimantan 2019)	 |	https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html
 Indonesia Geospatial|	TIF files |	Provinsi Kalimantan Timur |	https://www.indonesia-geospasial.com/2020/01/download-dem-srtm-30-meter-se-indonesia.html
-
+Geofabrik| Shape files | Street  |  https://download.geofabrik.de/asia/indonesia/kalimantan.html
 
 
 # 2.0 Data Extraction
