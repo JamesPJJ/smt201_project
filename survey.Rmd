@@ -11,7 +11,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Data preparation
+# Introduction
+
+In this report, the team will highlight key findings gathered using various datasets for our study area. We analysed various aspects giving the team findings into the study area and providing us valuable insights about it.
 
 * Population and Demographic
 * Economic and Businesses
@@ -178,11 +180,14 @@ The **studyArea** layer will be colored by four districts.
 
 ![](img/coloredStudyArea3.png)
 
-## Power house 
-Merge layers
+## 3.0 Power house 
+
+### 3.1 Merge layers
+
 On the menu bar, Click **Vector** -> **Data Management Tool**s -> **Merge Vector Layers**
 
 ![](img/coloredStudyArea4.png)
+
 * For Input layers, click ... to choose layers.
 
 * Choose the **electricity** and **powerhouse** layers within the four districts.
@@ -193,6 +198,7 @@ On the menu bar, Click **Vector** -> **Data Management Tool**s -> **Merge Vector
 * Select CRS to **EPSG:23845**. 
 
 ![](img/coloredStudyArea6.png)
+
 * Click **Run**. 
 
 * A temporary Merged layer will be created.

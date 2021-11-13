@@ -15,9 +15,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # 1.0 Introduction
 
+In this report, the team will perform Multi-Criteria Decision Analysis to determine the suitability of the sites for the capital city relocation. We also used AHP Analysis to aid the process of finding the potential sites. Lastly, the team also performed our own analysis to narrow down the list of potential sites to a single site. The single site is then determined to be the most suitable site for the relocation of the new capital city. 
+
 ## 1.1 Layers we need
 
-Layers we need:
+To fulfill the requirements of site selection, there are the layers we need:
+
 
 Requirements | Layer  |
 ------------- | ------------- 
@@ -423,7 +426,7 @@ Regarding cell towers, there are more cell towers in and around Suka Maju compar
 
 For health-related facilities, it can be seen from the map that there is a health service and center facility in Suka Maju and none in Tanjung Harapan. If the relocation of the capital city is to be in either site, Suka Maju will be more suitable. With an existing healthcare facility, it would translate to more capable resources with regards to healthcare. There would potentially be more trained healthcare professionals available if another healthcare facility is to be built for the capital city. Even if there is no additional development, an existing facility would be better than no such facility.
 
-Thus, after considering the various factors mentioned above, our team feels that Suka Maju is the preferred site for the relocation.
+Thus, after considering the various factors mentioned above, our team feels that **Suka Maju** is the preferred site for the relocation.
 
 ![](img/final_site.png)
 

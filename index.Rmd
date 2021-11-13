@@ -1,7 +1,10 @@
 ---
 title: "SMT201 G1 T8 GIS Project Website"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  In 2019, during his annual state of the union address at the parliament, President Joko Widodo announced a plan to relocate the capital to Kalimantan on the island of Borneo. As part of the plan, part of Kutai Kartanegara Regency (Kabupaten Kutai Kartanegara) and Penajam North Paser Regency (Kabupaten Penajam Utara) in East Kalimantan will be carved out to create a new **province-level planned city**, and the capital will be relocated to a more central location within Indonesia. The plan is part of a strategy to reduce developmental inequality between Java and other islands in the Indonesian archipelago and to reduce Jakarta’s burden as Indonesia’s primary hub.
+  
+  Our team provide recommendation and analysis on this project topic. Feel free to browse our reports and poster!
+
 site: distill::distill_website
 ---
 
