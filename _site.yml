@@ -4,17 +4,7 @@ description: |
   SMT201 GIS Project Website
 output_dir: "_site"
 navbar:
-  left:
-    - text: "Proposal"
-      href: overview.html
-    - text: "Data Preparation"
-      href: dataprep.html
-    - text: "Report of Survey"
-      href: survey.html
-    - text: "Site Selection Report"
-      href: siteSelection.html
-    - text: "Poster"
-      href: project_poster.html
+
   right:
     - text: "Home"
       href: index.html
